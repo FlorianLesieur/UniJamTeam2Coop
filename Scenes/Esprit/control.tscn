@@ -10,10 +10,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 57.0
-offset_right = 12.0
-offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -25,11 +21,9 @@ offset_right = 88.0
 offset_bottom = 56.0
 
 [node name="Button" type="Button" parent="." unique_id=1531267939]
-layout_mode = 0
-offset_left = 1140.0
-offset_top = 591.0
-offset_right = 1276.0
-offset_bottom = 727.0
+layout_mode = 1
+offset_right = 136.0
+offset_bottom = 136.0
 icon = SubResource("CompressedTexture2D_l1lbf")
 script = ExtResource("1_yug5r")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
