@@ -1,42 +1,36 @@
 [gd_scene format=3 uid="uid://c4vpmm2hwe3j2"]
 
-[ext_resource type="Script" uid="uid://dq8d15t07mjj" path="res://Scripts/drag_drop.gd" id="1_yug5r"]
+[ext_resource type="Script" uid="uid://c7mx22u13m6qu" path="res://Scenes/Esprit/RoomSpirit.gd" id="1_6i2au"]
+[ext_resource type="PackedScene" uid="uid://cbp4wp85axxqs" path="res://Scenes/Esprit/piece.tscn" id="1_l1lbf"]
 [ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="2_4hhxt"]
+[ext_resource type="Texture2D" uid="uid://wditcyol2n8i" path="res://Assets/QueletonComponents/Head.png" id="3_f62xg"]
 
-[node name="Control" type="Control" unique_id=522636664]
+[node name="RoomSpirit" type="Control" unique_id=522636664 node_paths=PackedStringArray("pieces")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 57.0
-offset_right = 12.0
-offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6i2au")
+pieces = [NodePath("Piece"), NodePath("Piece2")]
+keys = Array[Vector2]([Vector2(511, 264), Vector2(0, 0)])
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=984632606]
+[node name="Piece" parent="." unique_id=1248601502 instance=ExtResource("1_l1lbf")]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 16.0
-offset_right = 88.0
-offset_bottom = 56.0
 
-[node name="Button" type="Button" parent="." unique_id=1531267939]
+[node name="Piece2" parent="." unique_id=1851389205 instance=ExtResource("1_l1lbf")]
 layout_mode = 0
-offset_left = 226.0
-offset_top = 46.0
-offset_right = 234.0
-offset_bottom = 86.0
-scale = Vector2(10.402628, 2.731142)
-toggle_mode = true
-script = ExtResource("1_yug5r")
-metadata/_custom_type_script = "uid://dq8d15t07mjj"
+offset_left = 299.0
+offset_top = 106.0
+offset_right = 435.0
+offset_bottom = 242.0
+icon = ExtResource("3_f62xg")
 
-[node name="Icon" type="Sprite2D" parent="Button" unique_id=1117698301]
-position = Vector2(10.38199, 45.40225)
-scale = Vector2(0.09598172, 0.3661472)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1112367288]
+position = Vector2(511, 264)
 texture = ExtResource("2_4hhxt")
 
-[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
-[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1515225787]
+position = Vector2(652, 145)
+texture = ExtResource("3_f62xg")
