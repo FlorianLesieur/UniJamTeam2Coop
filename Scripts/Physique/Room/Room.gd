@@ -9,9 +9,7 @@ signal sorti
 
 
 func _on_entree_body_entered(body: Node2D) -> void:
-	print("enter")
 	if body is Player:
-		print("player")
 		retour.emit()
 
 

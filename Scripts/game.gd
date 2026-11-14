@@ -1,8 +1,8 @@
 extends Node2D
 
-var emplacement = 2
+var emplacement = 1
 
-@onready var player : Node2D = $Node2D
+@onready var player : Node2D = $Player
 @onready var camera : Camera2D = $Camera2D
 
 @export var rooms : Array[Room]
