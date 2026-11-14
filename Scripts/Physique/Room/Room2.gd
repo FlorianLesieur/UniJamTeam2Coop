@@ -6,6 +6,7 @@ var locked = true
 
 @export var defaultLit = true
 
+@warning_ignore("unused_parameter")
 func GetButton(id : int) -> void:
 	if locked:
 		door.queue_free()
