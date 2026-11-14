@@ -17,6 +17,8 @@ func _ready() -> void:
 	room5.prev.connect(prev_room5)
 	rooms[0].visible=true
 	rooms[0].hide_prev_button()
+	rooms[4].hide_next_button()
+	#EndRoom.visible=false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
@@ -26,6 +28,11 @@ func _process(delta: float) -> void:
 			$Room2/X/reveal.visible=true
 			$Room2/D/reveal.visible=true
 			$Room2/T/reveal.visible=true
+		if (indice==4):
+			rooms[indice].visible=false
+			#EndRoom.visible=true
+	if (room5.all_placed()):
+		$Room5/Square/reveal.visible=true
 func move_to_prev():
 	if (indice==4):
 		rooms[indice].visible=false
@@ -42,9 +49,6 @@ func move_to_next():
 	if (indice==3):
 		rooms[indice].visible=false
 		room5.visible=true
-	elif (indice==4):
-		rooms[indice].visible=false
-		#end.visible=true
 	else:
 		rooms[indice].visible=false
 		indice+=1

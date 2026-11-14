@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b6yqi1fprkf7w" path="res://Assets/Esprit/Pillars/Triangle_Pillar.png" id="17_8wlue"]
 [ext_resource type="Texture2D" uid="uid://drrnyq2arfrxv" path="res://Assets/Esprit/Pillars/Square_Pillar.png" id="18_38xxe"]
 [ext_resource type="Texture2D" uid="uid://m6vouc5imojr" path="res://Assets/Esprit/Pillars/Square_Pillar_with_info_revealed.png" id="22_twiwv"]
+[ext_resource type="Texture2D" uid="uid://b64we45vuc2h0" path="res://Assets/Esprit/Maps/Map_6.png" id="23_k3e2r"]
 
 [sub_resource type="Gradient" id="Gradient_c0dwe"]
 offsets = PackedFloat32Array(0.006024096, 0.43975905, 0.48795182, 1)
@@ -45,7 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3utc4")
-rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4")]
+rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room6")]
 room5 = NodePath("Room5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940475652]
@@ -219,6 +220,7 @@ script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
 [node name="Room5" parent="." unique_id=1121321171 node_paths=PackedStringArray("pieces") instance=ExtResource("12_km8cv")]
+visible = false
 layout_mode = 1
 script = ExtResource("13_fgjyx")
 pieces = [NodePath("Semi_Circle"), NodePath("Rhombus"), NodePath("Square"), NodePath("Triangle")]
@@ -303,3 +305,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("22_twiwv")
+
+[node name="Room6" parent="." unique_id=267208149 instance=ExtResource("2_3ahv2")]
+layout_mode = 1
+
+[node name="Map6" type="Sprite2D" parent="Room6" unique_id=201310566]
+position = Vector2(604, 266)
+texture = ExtResource("23_k3e2r")

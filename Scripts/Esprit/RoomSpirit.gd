@@ -36,6 +36,9 @@ func hide_prev_button():
 func show_next_button():
 	$Button.visible=true
 
+func hide_next_button():
+	$Button.visible=false
+
 
 func _on_button_pressed() -> void:
 	next.emit()
