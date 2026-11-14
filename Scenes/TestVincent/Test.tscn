@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://2phrmlthr64m" path="res://Assets/QueletonComponents/Armleft.png" id="1_8rp77"]
 [ext_resource type="Script" uid="uid://bbimfjtnalko" path="res://Scenes/TestVincent/Caillou.gd" id="1_753ym"]
 [ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/TestVincent/player.tscn" id="2_753ym"]
+[ext_resource type="Script" uid="uid://sx6evuhyb2wc" path="res://Scenes/TestVincent/node.gd" id="4_o1sr1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p7ie5"]
 size = Vector2(31, 26)
@@ -26,3 +27,6 @@ shape = SubResource("RectangleShape2D_p7ie5")
 
 [node name="Player" parent="." unique_id=873138412 instance=ExtResource("2_753ym")]
 position = Vector2(169, 160)
+
+[node name="Node" type="Node" parent="." unique_id=1548909232]
+script = ExtResource("4_o1sr1")
