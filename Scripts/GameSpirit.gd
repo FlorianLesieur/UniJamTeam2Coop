@@ -16,17 +16,32 @@ func _process(delta: float) -> void:
 	if (rooms[indice].all_placed()&&indice<len(rooms)-1):
 		rooms[indice].show_next_button()
 
-func _on_room_spirit_prev() -> void:
-	print("prev recu")
+func move_to_prev():
 	rooms[indice].visible=false
 	indice-=1
 	rooms[indice].visible=true
 	if (indice==0):
 		rooms[indice].hide_prev_button()
 
-
-func _on_room_spirit_next() -> void:
-	print("next recu")
+func move_to_next():
 	rooms[indice].visible=false
 	indice+=1
 	rooms[indice].visible=true
+
+func _on_room_spirit_prev() -> void:
+	move_to_prev()
+
+func _on_room_spirit_next() -> void:
+	move_to_next()
+
+func _on_room_spirit_2_next() -> void:
+	move_to_next()
+
+func _on_room_spirit_2_prev() -> void:
+	move_to_prev()
+
+func _on_room_spirit_3_next() -> void:
+	move_to_next()
+
+func _on_room_spirit_3_prev() -> void:
+	move_to_prev()

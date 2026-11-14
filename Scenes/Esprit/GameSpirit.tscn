@@ -65,3 +65,7 @@ offset_bottom = 285.0
 
 [connection signal="next" from="RoomSpirit" to="." method="_on_room_spirit_next"]
 [connection signal="prev" from="RoomSpirit" to="." method="_on_room_spirit_prev"]
+[connection signal="next" from="RoomSpirit2" to="." method="_on_room_spirit_2_next"]
+[connection signal="prev" from="RoomSpirit2" to="." method="_on_room_spirit_2_prev"]
+[connection signal="next" from="RoomSpirit3" to="." method="_on_room_spirit_3_next"]
+[connection signal="prev" from="RoomSpirit3" to="." method="_on_room_spirit_3_prev"]

@@ -35,10 +35,10 @@ func hide_prev_button():
 func show_next_button():
 	$Button.visible=true
 
-func _on_button_3_prev() -> void:
-	print("bouton prev presser")
-	prev.emit()
 
 func _on_button_pressed() -> void:
-	print("bouton next presser")
 	next.emit()
+
+
+func _on_button_3_pressed() -> void:
+	prev.emit()

@@ -31,5 +31,5 @@ offset_right = 1039.0
 offset_bottom = 224.00002
 scale = Vector2(15, 17.25)
 
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
