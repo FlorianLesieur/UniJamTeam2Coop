@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bpc1eg4n688h4" path="res://Assets/Esprit/Pillars/Rhombus_Pillar.png" id="16_8wgek"]
 [ext_resource type="Texture2D" uid="uid://b6yqi1fprkf7w" path="res://Assets/Esprit/Pillars/Triangle_Pillar.png" id="17_8wlue"]
 [ext_resource type="Texture2D" uid="uid://drrnyq2arfrxv" path="res://Assets/Esprit/Pillars/Square_Pillar.png" id="18_38xxe"]
+[ext_resource type="Texture2D" uid="uid://m6vouc5imojr" path="res://Assets/Esprit/Pillars/Square_Pillar_with_info_revealed.png" id="22_twiwv"]
 
 [sub_resource type="Gradient" id="Gradient_c0dwe"]
 offsets = PackedFloat32Array(0.006024096, 0.43975905, 0.48795182, 1)
@@ -90,6 +91,7 @@ scale = Vector2(0.13, 0.13)
 texture = ExtResource("4_3ahv2")
 
 [node name="Room2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+visible = false
 layout_mode = 1
 pieces = [NodePath("D"), NodePath("X"), NodePath("T")]
 keys = Array[Vector2]([Vector2(685, 533), Vector2(460, 229), Vector2(381, 426)])
@@ -217,7 +219,6 @@ script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
 [node name="Room5" parent="." unique_id=1121321171 node_paths=PackedStringArray("pieces") instance=ExtResource("12_km8cv")]
-visible = false
 layout_mode = 1
 script = ExtResource("13_fgjyx")
 pieces = [NodePath("Semi_Circle"), NodePath("Rhombus"), NodePath("Square"), NodePath("Triangle")]
@@ -288,9 +289,17 @@ flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="TextureRect" type="TextureRect" parent="Room5/Square" unique_id=87058244]
+[node name="no_reveal" type="TextureRect" parent="Room5/Square" unique_id=87058244]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("18_38xxe")
+
+[node name="reveal" type="TextureRect" parent="Room5/Square" unique_id=77276067]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("22_twiwv")
