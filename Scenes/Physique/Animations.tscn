@@ -1,7 +1,13 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://dgo4adfgmva1"]
 
 [ext_resource type="Texture2D" uid="uid://d7hfg0oaae2d" path="res://Assets/QueletonComponents/HandRightt.png" id="1_tlyew"]
 [ext_resource type="Script" path="res://Scripts/Physique/Animations.gd" id="1_topvi"]
+=======
+[gd_scene format=3 uid="uid://b5pusxcwl1efh"]
+
+[ext_resource type="Texture2D" uid="uid://d7hfg0oaae2d" path="res://Assets/QueletonComponents/HandRightt.png" id="1_tlyew"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://2phrmlthr64m" path="res://Assets/QueletonComponents/Armleft.png" id="2_2jxgu"]
 [ext_resource type="Texture2D" uid="uid://cvip2bved6onn" path="res://Assets/QueletonComponents/ArmRight.png" id="3_m3vtc"]
 [ext_resource type="Texture2D" uid="uid://8q235ap23l4" path="res://Assets/QueletonComponents/Handleft.png" id="4_asmnq"]
@@ -91,6 +97,10 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_ik2nw"]
 resource_name = "Interaction"
 length = 0.1
+<<<<<<< Updated upstream
+=======
+loop_mode = 2
+>>>>>>> Stashed changes
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -100,7 +110,11 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-4.125, -0.25, 0, 0.25, 0, -4.125, -0.25, 0, 0.25, 0, -4.99, -0.083333336, 0.14416663, 0, 0, -4.8750005, -0.03811705, 0, 0.05077184, 0, -4.99, -0.083333336, 0.14416663, 0, 0, -4.125, -0.25, 0, 0.25, 0),
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.001, 0.10463104, 0.33333334, 0.63796437, 1.5)
+=======
+"times": PackedFloat32Array(0, 0.001, 0.13796437, 0.36666667, 0.67129767, 1.5)
+>>>>>>> Stashed changes
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -111,7 +125,11 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-5.125, -0.25, 0, 0.25, 0, -5.125, -0.25, 0, 0.25, 0, -6.385, -0.083333336, 0.21000004, 0, 0, -1.75, -0.03811705, 0, 0.050030127, 0, -6.385, -0.083333336, 0.21000004, 0, 0, -5.125, -0.25, 0, 0.25, 0),
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.001, 0.10463104, 0.33333334, 0.6335141, 1.5)
+=======
+"times": PackedFloat32Array(0, 0.001, 0.13796437, 0.36666667, 0.66684747, 1.5)
+>>>>>>> Stashed changes
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -120,7 +138,11 @@ tracks/2/path = NodePath("Armleft:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.001, 0.10463104, 0.33333334, 0.6335141, 1.5),
+=======
+"times": PackedFloat32Array(0, 0.001, 0.13796437, 0.36666667, 0.66684747, 1.5),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [-0.80983275, -0.80983275, 0.5061455, -0.33161256, 0.5061455, -0.80983275]
@@ -132,7 +154,11 @@ tracks/3/path = NodePath("HandLeft:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.10574296, 0.3302692, 0.636683, 1.5),
+=======
+"times": PackedFloat32Array(0, 0.13907629, 0.36360252, 0.6700163, 1.5),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-6.2499986, -1.5), Vector2(-10.385, -9.015), Vector2(-9, 0.625), Vector2(-10.385, -9.015), Vector2(-6.2499986, -1.5)]
@@ -144,7 +170,11 @@ tracks/4/path = NodePath("HandLeft:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.10574296, 0.636683, 1.5053668),
+=======
+"times": PackedFloat32Array(0, 0.13907629, 0.6700163, 1.5053668),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [-0.85010713, -0.85010713, -0.85010713, -0.85010713]
@@ -158,7 +188,11 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
 "points": PackedFloat32Array(3.875, -0.25, 0, 0.25, 0, -3.935, -0.03217345, 1.3016667, 0, 0, -4.375, -0.049568623, 0, 0.050431382, 0, -3.935, -0.03217345, 1.3016667, 0, 0, 3.875, -0.25, 0, 0.25, 0),
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.03796436, 0.33537608, 0.63796437, 1.5)
+=======
+"times": PackedFloat32Array(0, 0.07129769, 0.36870942, 0.67129767, 1.5)
+>>>>>>> Stashed changes
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -169,7 +203,11 @@ tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
 "points": PackedFloat32Array(-5.125, -0.25, 0, 0.25, 0, -3.15, -0.03217345, -0.32916668, 0, 0, -5.875, -0.050728507, 0, 0.04958024, 0, -3.15, -0.03217345, -0.32916668, 0, 0, -5.125, -0.25, 0, 0.25, 0),
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.031005055, 0.33537608, 0.6328575, 1.5)
+=======
+"times": PackedFloat32Array(0, 0.064338386, 0.36870942, 0.66619086, 1.5)
+>>>>>>> Stashed changes
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -178,7 +216,11 @@ tracks/7/path = NodePath("ArmRight:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.031005055, 0.6328575, 1.5),
+=======
+"times": PackedFloat32Array(0, 0.064338386, 0.66619086, 1.5),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.92327917, 2.693043, 2.693043, 0.92327917]
@@ -190,7 +232,11 @@ tracks/8/path = NodePath("HandRight:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.03611195, 0.33537608, 0.63796437, 1.5),
+=======
+"times": PackedFloat32Array(0, 0.06944528, 0.36870942, 0.67129767, 1.5),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(6.323921, -2.8803957), Vector2(-9.206, -3.535), Vector2(-10.125, -8.875), Vector2(-9.206, -3.535), Vector2(6.323921, -2.8803957)]
@@ -202,7 +248,11 @@ tracks/9/path = NodePath("HandRight:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.03611195, 0.63796437, 1.5),
+=======
+"times": PackedFloat32Array(0, 0.06944528, 0.67129767, 1.5),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [1.097812, 0.8709193, 0.8709193, 1.097812]
@@ -456,6 +506,10 @@ tracks/20/keys = {
 
 [sub_resource type="Animation" id="Animation_lp6f1"]
 resource_name = "walk"
+<<<<<<< Updated upstream
+=======
+length = 1.1333333
+>>>>>>> Stashed changes
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -587,7 +641,11 @@ tracks/11/path = NodePath("FootLeft:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.5, 1.0018437),
+=======
+"times": PackedFloat32Array(0, 0.6, 1.1),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(3.75, 3.75), Vector2(4.125, 6.5), Vector2(3.75, 3.75)]
@@ -599,7 +657,11 @@ tracks/12/path = NodePath("FootRightt:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0.13470845, 0.5, 0.8333333),
+=======
+"times": PackedFloat32Array(0.06666667, 0.53333336, 1.1),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-4.25, 8.75), Vector2(-3.8749995, 6.625), Vector2(-4.25, 8.75)]
@@ -625,10 +687,15 @@ _data = {
 &"walk": SubResource("Animation_lp6f1")
 }
 
+<<<<<<< Updated upstream
 [node name="Body" type="Node2D" unique_id=1022959358]
 scale = Vector2(8, 8)
 script = ExtResource("1_topvi")
 metadata/_custom_type_script = "uid://csxgkya22btv5"
+=======
+[node name="Body" type="Node2D" unique_id=182251557]
+scale = Vector2(8, 8)
+>>>>>>> Stashed changes
 
 [node name="Armleft" type="Sprite2D" parent="." unique_id=398445756]
 position = Vector2(-3.875, -5)
@@ -643,6 +710,24 @@ skew = -0.015048504
 texture = ExtResource("1_tlyew")
 offset = Vector2(8.14618, -2.1962492)
 
+<<<<<<< Updated upstream
+=======
+[node name="ArmRight" type="Sprite2D" parent="." unique_id=2051923751]
+position = Vector2(4.6250005, -5.999999)
+rotation = 0.92327917
+scale = Vector2(0.9968519, 0.99444306)
+skew = -0.014855266
+texture = ExtResource("3_m3vtc")
+offset = Vector2(7.1978855, -0.4274819)
+
+[node name="HandRight" type="Sprite2D" parent="." unique_id=595934720]
+position = Vector2(6.25, -1.3750001)
+rotation = 1.097812
+scale = Vector2(0.9999999, 1)
+texture = ExtResource("4_asmnq")
+offset = Vector2(-10.125, -2)
+
+>>>>>>> Stashed changes
 [node name="Body2" type="Sprite2D" parent="." unique_id=1603835269]
 position = Vector2(0.25, -6.375)
 texture = ExtResource("5_xnxu1")
@@ -655,7 +740,11 @@ offset = Vector2(-3.8878002, -9.740989)
 
 [node name="FootRightt" type="Sprite2D" parent="." unique_id=1754900038]
 position = Vector2(-3.875, 6.125)
+<<<<<<< Updated upstream
 scale = Vector2(1.0028552, 0.98838824)
+=======
+scale = Vector2(1.0028552, 0.9883883)
+>>>>>>> Stashed changes
 skew = 0.003924608
 texture = ExtResource("7_l2msf")
 offset = Vector2(3.584758, -11.529188)
@@ -671,6 +760,7 @@ position = Vector2(0.205, 0.25)
 texture = ExtResource("9_72j2f")
 offset = Vector2(-0.4992218, -5.5074196)
 
+<<<<<<< Updated upstream
 [node name="ArmRight" type="Sprite2D" parent="." unique_id=2051923751]
 position = Vector2(4.6250005, -5.999999)
 rotation = 0.92327917
@@ -689,3 +779,8 @@ offset = Vector2(-10.125, -2)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1096059568]
 libraries/ = SubResource("AnimationLibrary_4xwvj")
 autoplay = &"IDLE"
+=======
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1096059568]
+libraries/ = SubResource("AnimationLibrary_4xwvj")
+speed_scale = 2.0
+>>>>>>> Stashed changes

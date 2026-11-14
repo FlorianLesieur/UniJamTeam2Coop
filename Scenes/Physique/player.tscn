@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyseuftnyspkx"]
 
 [ext_resource type="Script" uid="uid://croetm8tuqfjb" path="res://Scripts/Physique/Player.gd" id="1_1pxl2"]
-[ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="2_esq04"]
+[ext_resource type="PackedScene" uid="uid://b5pusxcwl1efh" path="res://Scenes/Physique/Animations.tscn" id="2_1pxl2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mm65k"]
 size = Vector2(100, 100)
@@ -21,8 +21,7 @@ shape = SubResource("RectangleShape2D_mm65k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1644961681]
 shape = SubResource("CircleShape2D_1ppwc")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=790798512]
-texture = ExtResource("2_esq04")
+[node name="Body" parent="." unique_id=182251557 instance=ExtResource("2_1pxl2")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_zone_detection_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_zone_detection_body_exited"]
