@@ -34,7 +34,7 @@ script = ExtResource("1_yug5r")
 
 [node name="Icon" type="Sprite2D" parent="Button" unique_id=1117698301]
 position = Vector2(10.38199, 45.40225)
-scale = Vector2(0.09612956, 0.3661472)
+scale = Vector2(0.09598172, 0.3661472)
 texture = ExtResource("2_4hhxt")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
