@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbfc1b5frpxv6"]
 
-[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/door.gd" id="1_33kwv"]
+[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/Physique/Door.gd" id="1_33kwv"]
 [ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="1_mnkgt"]
 [ext_resource type="Script" uid="uid://byti15bl6blnv" path="res://Scripts/button_light.gd" id="3_sixxa"]
 [ext_resource type="Script" uid="uid://sdfyijwuilnc" path="res://Scripts/charButton.gd" id="4_k128m"]
