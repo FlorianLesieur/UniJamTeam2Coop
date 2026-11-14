@@ -23,7 +23,6 @@ offset_bottom = 209.00002
 scale = Vector2(20, 24)
 
 [node name="Button" type="Button" parent="." unique_id=371366058]
-visible = false
 layout_mode = 0
 offset_left = 1031.0
 offset_top = 216.00002

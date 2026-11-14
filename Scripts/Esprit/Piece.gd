@@ -7,8 +7,8 @@ var pos_pressed := Vector2.ZERO
 var goutière = 10
 var pos_min_x = 0
 var pos_min_y = 0
-var pos_max_x=1152-size.x
-var pos_max_y=648-size.y
+var pos_max_x=1152-size.x*scale.x
+var pos_max_y=648-size.y*scale.y
 var position_visee #position visée par la souris
 var pos_key : Vector2
 var seuil = 2500 #La distance est renvoyé AU CARRE
@@ -32,6 +32,7 @@ func _process(delta: float) -> void:
 		if (position_visee.y>pos_max_y-goutière):
 			position_visee.y=pos_max_y-goutière
 		position = lerp(position, position_visee, delta * speed)
+		print("position : ",position)
 		#position.x=move_toward(position.x,position.x-pos_x_pressed+position_souris.x,delta*speed)
 		#position.y=move_toward(position.y,position.y-pos_y_pressed+position_souris.y,delta*speed)
 

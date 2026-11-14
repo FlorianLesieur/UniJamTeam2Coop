@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3cs83e4iui5w" path="res://Scripts/Esprit/GameSpirit.gd" id="1_3utc4"]
 [ext_resource type="PackedScene" uid="uid://c4vpmm2hwe3j2" path="res://Scenes/Esprit/RoomSpirit.tscn" id="2_3ahv2"]
+[ext_resource type="Texture2D" uid="uid://b2onp7e1qovco" path="res://Assets/Esprit/Pillars/White_Pillar_Top.png" id="4_3ahv2"]
 [ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="4_tldpl"]
 [ext_resource type="Script" uid="uid://dq8d15t07mjj" path="res://Scripts/Esprit/Piece.gd" id="5_3ahv2"]
 
@@ -13,40 +14,58 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3utc4")
-rooms = [NodePath("RoomSpirit"), NodePath("RoomSpirit2"), NodePath("RoomSpirit3")]
+rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("RoomSpirit3")]
 
-[node name="RoomSpirit" parent="." unique_id=522636664 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
-visible = false
+[node name="Room1" parent="." unique_id=522636664 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 layout_mode = 1
 pieces = [NodePath("Piece")]
 
-[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit" unique_id=90563721]
+[node name="Sprite2D4" type="Sprite2D" parent="Room1" unique_id=90563721]
 position = Vector2(511, 264)
 texture = ExtResource("4_tldpl")
 
-[node name="Piece" type="Button" parent="RoomSpirit" unique_id=727971869]
+[node name="Piece" type="Button" parent="Room1" unique_id=727971869]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("4_tldpl")
+offset_left = 161.0
+offset_top = 58.0
+offset_right = 238.0
+offset_bottom = 136.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="RoomSpirit2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+[node name="TextureRect" type="TextureRect" parent="Room1/Piece" unique_id=1275699926]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -39.0
+offset_right = 728.5
+offset_bottom = 737.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_3ahv2")
+
+[node name="Room2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+visible = false
 layout_mode = 1
 pieces = [NodePath("Piece"), NodePath("Piece2")]
 keys = Array[Vector2]([Vector2(300, 250), Vector2(700, 250)])
 
-[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit2" unique_id=724058428]
+[node name="Sprite2D4" type="Sprite2D" parent="Room2" unique_id=724058428]
+visible = false
 position = Vector2(300, 250)
 texture = ExtResource("4_tldpl")
 
-[node name="Sprite2D5" type="Sprite2D" parent="RoomSpirit2" unique_id=368042144]
+[node name="Sprite2D5" type="Sprite2D" parent="Room2" unique_id=368042144]
 position = Vector2(700, 250)
 texture = ExtResource("4_tldpl")
 
-[node name="Piece2" type="Button" parent="RoomSpirit2" unique_id=1560612433]
+[node name="Piece2" type="Button" parent="Room2" unique_id=1560612433]
 layout_mode = 0
 offset_left = 631.0
 offset_top = 352.0
@@ -57,7 +76,7 @@ flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="Piece" type="Button" parent="RoomSpirit2" unique_id=780075951]
+[node name="Piece" type="Button" parent="Room2" unique_id=780075951]
 layout_mode = 0
 offset_left = 250.0
 offset_top = 375.0
@@ -65,6 +84,13 @@ offset_right = 386.0
 offset_bottom = 511.0
 icon = ExtResource("4_tldpl")
 flat = true
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="Piece3" type="Button" parent="Room2" unique_id=1239340210]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
