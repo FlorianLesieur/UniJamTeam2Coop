@@ -1,38 +1,39 @@
 [gd_scene format=3 uid="uid://d3w2uuf2v2wod"]
 
 [ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/room.gd" id="1_ngoik"]
-[ext_resource type="PackedScene" uid="uid://cnj2oa0mr1voc" path="res://Scenes/TestVincent/node_2d.tscn" id="2_xjaah"]
+[ext_resource type="Texture2D" uid="uid://b8jr3wqtgh43u" path="res://Assets/Physique/Room/RoomA.png" id="3_8mg30"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4v7s"]
-a = Vector2(1000, 0)
-b = Vector2(1000, 200)
+a = Vector2(962, 103)
+b = Vector2(968, 329)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_57qmd"]
-a = Vector2(0, 500)
-b = Vector2(1000, 500)
+a = Vector2(127, 655)
+b = Vector2(981, 655)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d0u6y"]
-a = Vector2(1000, 500)
-b = Vector2(1000, 300)
+a = Vector2(975, 658)
+b = Vector2(971, 429)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3gngh"]
-a = Vector2(1000, 0)
-b = Vector2(0, 0)
+a = Vector2(965, 103)
+b = Vector2(190, 103)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fcnqv"]
-b = Vector2(0, 200)
+a = Vector2(190, 106)
+b = Vector2(193, 335)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7numd"]
-a = Vector2(0, 300)
-b = Vector2(0, 500)
+a = Vector2(193, 417)
+b = Vector2(196, 652)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p1u0y"]
-a = Vector2(0, 200)
-b = Vector2(0, 300)
+a = Vector2(193, 341)
+b = Vector2(193, 429)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5s0fj"]
-a = Vector2(1000, 200)
-b = Vector2(1000, 300)
+a = Vector2(965, 332)
+b = Vector2(968, 423)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(100, 100)
@@ -40,8 +41,14 @@ size = Vector2(100, 100)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
 size = Vector2(100, 100)
 
-[node name="Room" type="Node2D" unique_id=1387040029]
+[node name="Room" type="Node2D" unique_id=1018444833]
 script = ExtResource("1_ngoik")
+metadata/_custom_type_script = "uid://3ikvys6b1miu"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1459927994]
+position = Vector2(579.99994, 381)
+scale = Vector2(7, 7)
+texture = ExtResource("3_8mg30")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1895379271]
 
@@ -74,38 +81,39 @@ shape = SubResource("SegmentShape2D_fcnqv")
 shape = SubResource("SegmentShape2D_7numd")
 
 [node name="PorteEntree" type="StaticBody2D" parent="." unique_id=1472512313]
-visible = false
 collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PorteEntree" unique_id=510603109]
-visible = false
 shape = SubResource("SegmentShape2D_p1u0y")
 
 [node name="PorteSortie" type="StaticBody2D" parent="." unique_id=1523172327]
-visible = false
 collision_layer = 0
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PorteSortie" unique_id=1279018490]
-visible = false
 shape = SubResource("SegmentShape2D_5s0fj")
 
 [node name="Entree" type="Area2D" parent="." unique_id=1835958162]
-position = Vector2(-50, 250)
-collision_layer = 0
-collision_mask = 0
+position = Vector2(130, 370)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entree" unique_id=1746301670]
 shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="Sortie" type="Area2D" parent="." unique_id=1645239023]
-position = Vector2(1050, 250)
-collision_layer = 0
-collision_mask = 0
+position = Vector2(1020, 370)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sortie" unique_id=1594531728]
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="Node2D" parent="." unique_id=762492996 instance=ExtResource("2_xjaah")]
-scale = Vector2(0.5, 0.5)
+[node name="ExitSpawn" type="Node2D" parent="." unique_id=800696970]
+position = Vector2(905, 377)
+
+[node name="EntrySpawn" type="Node2D" parent="." unique_id=1059212161]
+position = Vector2(252, 380)
+
+[node name="Middle" type="Node2D" parent="." unique_id=1987679942]
+position = Vector2(580, 387)
+
+[connection signal="body_entered" from="Entree" to="." method="_on_entree_body_entered"]
+[connection signal="body_entered" from="Sortie" to="." method="_on_sortie_body_entered"]
