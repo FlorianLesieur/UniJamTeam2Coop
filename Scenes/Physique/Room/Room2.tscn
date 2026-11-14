@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://dw8m0xgaw6d8a"]
 
 [ext_resource type="Texture2D" uid="uid://x3o05uuhd83m" path="res://Assets/Physique/Room/RoomB.png" id="1_3wdmx"]
-[ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/openDoor.gd" id="1_7cnb6"]
-[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/door.gd" id="3_2tutk"]
+[ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/Physique/Room/Room1.gd" id="1_7cnb6"]
+[ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/Physique/Room/Room.gd" id="1_511yp"]
+[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/Physique/Door.gd" id="3_2tutk"]
 [ext_resource type="Texture2D" uid="uid://ce272n7t3w65d" path="res://Assets/Physique/Porte.png" id="4_w3e7n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa0vk"]
 size = Vector2(74, 70)
 
-[node name="Room2Phys" type="Node2D" unique_id=1419052791]
+[node name="Room2" type="Node2D" unique_id=1381781980]
+script = ExtResource("1_511yp")
+metadata/_custom_type_script = "uid://3ikvys6b1miu"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1157344240]
 
