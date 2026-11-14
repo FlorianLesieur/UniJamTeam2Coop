@@ -7,6 +7,8 @@ var emplacement = 1
 
 @export var rooms : Array[Room]
 
+@export var isOnDefaultLit = true
+
 func _on_room_retour() -> void:
 	emplacement -= 1
 	print(emplacement)

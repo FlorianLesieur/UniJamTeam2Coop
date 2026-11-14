@@ -4,11 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c4vpmm2hwe3j2" path="res://Scenes/Esprit/RoomSpirit.tscn" id="2_3ahv2"]
 [ext_resource type="Texture2D" uid="uid://cpaqlccniw7c6" path="res://Assets/Esprit/Maps/Map_1.png" id="3_ppguh"]
 [ext_resource type="Texture2D" uid="uid://b2onp7e1qovco" path="res://Assets/Esprit/Pillars/White_Pillar_Top.png" id="4_3ahv2"]
-[ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="4_tldpl"]
 [ext_resource type="Script" uid="uid://dq8d15t07mjj" path="res://Scripts/Esprit/Piece.gd" id="5_3ahv2"]
 [ext_resource type="Texture2D" uid="uid://i76a5i82rd2h" path="res://Assets/Esprit/Maps/Map_2.png" id="6_tldpl"]
 [ext_resource type="Texture2D" uid="uid://d1dd4cmxnbjne" path="res://Assets/Esprit/Pillars/X_Pillar_Top.png" id="8_fhdtl"]
 [ext_resource type="Texture2D" uid="uid://ce5xacky5r3rb" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top.png" id="9_8ol5l"]
+[ext_resource type="Texture2D" uid="uid://dt3xd2vtp550n" path="res://Assets/Esprit/Pillars/T_Pillar_Top.png" id="9_w5e7p"]
+[ext_resource type="Texture2D" uid="uid://b4skgf5lmasfl" path="res://Assets/Esprit/Maps/Map_3.png" id="10_8ol5l"]
+[ext_resource type="Texture2D" uid="uid://da2oknrwtqijd" path="res://Assets/Esprit/Maps/Map_4.png" id="11_w5e7p"]
 
 [sub_resource type="Gradient" id="Gradient_c0dwe"]
 offsets = PackedFloat32Array(0.006024096, 0.43975905, 0.48795182, 1)
@@ -16,6 +18,13 @@ colors = PackedColorArray(0.24096386, 0.24096386, 0.24096386, 1, 0.43975905, 0.4
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_jyycw"]
 gradient = SubResource("Gradient_c0dwe")
+
+[sub_resource type="Gradient" id="Gradient_w5e7p"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_riqys"]
+gradient = SubResource("Gradient_w5e7p")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 1)
 
 [node name="GameSpirit" type="Control" unique_id=1736079434 node_paths=PackedStringArray("rooms")]
 layout_mode = 3
@@ -25,10 +34,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3utc4")
-rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("RoomSpirit3")]
+rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940475652]
-visible = false
 position = Vector2(488, 269)
 scale = Vector2(6826.9907, 1018.93976)
 texture = SubResource("GradientTexture1D_jyycw")
@@ -40,16 +48,16 @@ pieces = [NodePath("White_Pillar")]
 keys = Array[Vector2]([Vector2(-10, -20)])
 
 [node name="Map1" type="Sprite2D" parent="Room1" unique_id=653288189]
-position = Vector2(588, 332.00003)
+position = Vector2(569, 318)
 scale = Vector2(0.79999995, 0.79999995)
 texture = ExtResource("3_ppguh")
 
 [node name="White_Pillar" type="Button" parent="Room1" unique_id=727971869]
 layout_mode = 0
-offset_left = 360.0
-offset_top = 492.0
-offset_right = 460.0
-offset_bottom = 593.0
+offset_left = 341.0
+offset_top = 478.0
+offset_right = 441.0
+offset_bottom = 579.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
@@ -71,78 +79,104 @@ scale = Vector2(0.13, 0.13)
 texture = ExtResource("4_3ahv2")
 
 [node name="Room2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+visible = false
 layout_mode = 1
-pieces = [NodePath("Diamond"), NodePath("Piece2"), NodePath("Piece3")]
-keys = Array[Vector2]([Vector2(300, 250), Vector2(700, 250), Vector2(0, 0)])
+pieces = [NodePath("D"), NodePath("X"), NodePath("T")]
+keys = Array[Vector2]([Vector2(685, 533), Vector2(460, 229), Vector2(381, 426)])
 
 [node name="Map2" type="Sprite2D" parent="Room2" unique_id=2039060626]
 position = Vector2(569, 318)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("6_tldpl")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Room2" unique_id=724058428]
-position = Vector2(-97, 356)
-texture = ExtResource("4_tldpl")
-
-[node name="Piece2" type="Button" parent="Room2" unique_id=1560612433]
+[node name="X" type="Button" parent="Room2" unique_id=1560612433]
 layout_mode = 0
-offset_left = 631.0
-offset_top = 352.0
-offset_right = 731.0
-offset_bottom = 452.0
+offset_left = 212.0
+offset_top = 188.0
+offset_right = 312.0
+offset_bottom = 288.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="TextureRect" type="TextureRect" parent="Room2/Piece2" unique_id=1950855557]
+[node name="TextureRect" type="TextureRect" parent="Room2/X" unique_id=1950855557]
 layout_mode = 0
-offset_left = -414.0
-offset_top = -167.0
-offset_right = 353.0
-offset_bottom = 609.0
+offset_right = 767.0
+offset_bottom = 776.0
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("8_fhdtl")
 
-[node name="Diamond" type="Button" parent="Room2" unique_id=780075951]
+[node name="D" type="Button" parent="Room2" unique_id=780075951]
 layout_mode = 0
-offset_left = 342.0
+offset_left = 331.0
 offset_top = 378.0
-offset_right = 442.0
+offset_right = 431.0
 offset_bottom = 478.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="TextureRect" type="TextureRect" parent="Room2/Diamond" unique_id=111133853]
+[node name="TextureRect" type="TextureRect" parent="Room2/D" unique_id=111133853]
 layout_mode = 0
-offset_left = -9.0
-offset_right = 758.0
+offset_right = 767.0
 offset_bottom = 776.0
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("9_8ol5l")
 
-[node name="Piece3" type="Button" parent="Room2" unique_id=1239340210]
+[node name="T" type="Button" parent="Room2" unique_id=1239340210]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 633.0
+offset_top = 183.0
+offset_right = 733.0
+offset_bottom = 283.0
+flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="RoomSpirit3" parent="." unique_id=1809866431 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+[node name="TextureRect" type="TextureRect" parent="Room2/T" unique_id=1763598579]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("9_w5e7p")
+
+[node name="Room3" parent="." unique_id=1809866431 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 visible = false
 layout_mode = 1
 pieces = [NodePath("Piece")]
-keys = Array[Vector2]([Vector2(400, 250)])
+keys = Array[Vector2]([Vector2(-148, -39)])
 
-[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit3" unique_id=1179183449]
-position = Vector2(400, 250)
-texture = ExtResource("4_tldpl")
+[node name="Map3" type="Sprite2D" parent="Room3" unique_id=211320048]
+position = Vector2(577, 309)
+texture = ExtResource("10_8ol5l")
 
-[node name="Piece" type="Button" parent="RoomSpirit3" unique_id=1961517639]
+[node name="Piece" type="Button" parent="Room3" unique_id=727939232]
+custom_minimum_size = Vector2(0, 0.055)
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("4_tldpl")
+offset_left = -148.0
+offset_top = -39.0
+offset_right = -48.0
+offset_bottom = 61.0
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="Room4" parent="." unique_id=1936581324 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+layout_mode = 1
+pieces = [NodePath("EasterEgg")]
+keys = Array[Vector2]([Vector2(511, 273)])
+
+[node name="Map4" type="Sprite2D" parent="Room4" unique_id=1067082736]
+position = Vector2(584, 304)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_w5e7p")
+
+[node name="EasterEgg" type="Button" parent="Room4" unique_id=682814415]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 14.0
+offset_right = 58.0
+offset_bottom = 64.0
+icon = SubResource("GradientTexture2D_riqys")
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
