@@ -12,12 +12,12 @@ signal sorti
 func _on_room_retour() -> void:
 	emplacement -= 1
 	print(emplacement)
-	player.position = rooms[emplacement-1].exit
-	camera.position = rooms[emplacement-1].middle
+	player.position = rooms[emplacement-1].exit.position
+	camera.position = rooms[emplacement-1].middle.position
 
 
 func _on_room_sorti() -> void:
 	emplacement += 1
 	print(emplacement)
-	player.position = rooms[emplacement-1].entry
-	camera.position = rooms[emplacement-1].middle
+	player.position = rooms[emplacement-1].entry.position
+	camera.position = rooms[emplacement-1].middle.position
