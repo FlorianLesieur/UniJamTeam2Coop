@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://dw8m0xgaw6d8a"]
 
 [ext_resource type="Texture2D" uid="uid://x3o05uuhd83m" path="res://Assets/Physique/Room/RoomB.png" id="1_3wdmx"]
-[ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/Physique/Room/Room1.gd" id="1_7cnb6"]
 [ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/Physique/Room/Room.gd" id="1_511yp"]
-[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/Physique/Door.gd" id="3_2tutk"]
-[ext_resource type="Texture2D" uid="uid://ce272n7t3w65d" path="res://Assets/Physique/Porte.png" id="4_w3e7n"]
+[ext_resource type="Script" uid="uid://8awka03mo0ap" path="res://Scripts/Physique/Room/Room2.gd" id="2_1q34m"]
 [ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="6_1q34m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa0vk"]
-size = Vector2(74, 70)
+[ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="6_x1sat"]
+[ext_resource type="Script" uid="uid://dsge1puu5afj8" path="res://Scripts/Physique/PhysiqueButtonRoom2.gd" id="7_x1sat"]
+[ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/Physique/player.tscn" id="8_s1xa5"]
 
 [node name="Room2" type="Node2D" unique_id=1381781980]
 script = ExtResource("1_511yp")
@@ -17,29 +15,23 @@ metadata/_custom_type_script = "uid://3ikvys6b1miu"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1157344240]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1927648344]
-script = ExtResource("1_7cnb6")
+script = ExtResource("2_1q34m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=753027201]
-position = Vector2(-0.4999714, 8.583069e-06)
-scale = Vector2(8.006945, 5.785714)
+scale = Vector2(7, 7)
 texture = ExtResource("1_3wdmx")
 
-[node name="door" type="Node" parent="Node2D" unique_id=873450517]
-script = ExtResource("3_2tutk")
-metadata/_custom_type_script = "uid://bx6igbkca51n7"
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/door" unique_id=1513358740]
-position = Vector2(476, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/door/StaticBody2D" unique_id=147881420]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_aa0vk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/door/StaticBody2D" unique_id=1558894224]
-position = Vector2(-4.0000277, -0.4999995)
-scale = Vector2(7.9999967, 5.8125)
-texture = ExtResource("4_w3e7n")
-
 [node name="PhysiqueButton" parent="Node2D" unique_id=1878903987 instance=ExtResource("6_1q34m")]
+position = Vector2(418, -125)
+script = ExtResource("7_x1sat")
 
-[connection signal="pressed" from="Node2D/PhysiqueButton" to="Node2D" method="ButtonPressed"]
+[node name="Timer" type="Timer" parent="Node2D/PhysiqueButton" unique_id=2043119959]
+
+[node name="Door" parent="Node2D" unique_id=1118860039 instance=ExtResource("6_x1sat")]
+position = Vector2(416.00006, -1.9999998)
+scale = Vector2(7, 7)
+
+[node name="Player" parent="Node2D" unique_id=663629846 instance=ExtResource("8_s1xa5")]
+
+[connection signal="pressed" from="Node2D/PhysiqueButton" to="Node2D" method="GetButton"]
+[connection signal="timeout" from="Node2D/PhysiqueButton/Timer" to="Node2D/PhysiqueButton" method="_on_timeout"]
