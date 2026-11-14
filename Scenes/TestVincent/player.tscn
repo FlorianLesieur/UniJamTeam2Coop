@@ -24,3 +24,4 @@ shape = SubResource("RectangleShape2D_mm65k")
 shape = SubResource("CircleShape2D_1ppwc")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_zone_detection_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_zone_detection_body_exited"]
