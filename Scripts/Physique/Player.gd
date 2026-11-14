@@ -4,7 +4,9 @@ class_name Player
 
 const SPEED = 10000.0
 
-signal body_exit
+var button : PhysiqueButton = null
+
+
 
 func _physics_process(delta: float) -> void:
 
@@ -17,16 +19,19 @@ func _physics_process(delta: float) -> void:
 	else :
 		velocity = Vector2.ZERO
 
+	if (Input.is_action_just_pressed("Interact") && button != null) :
+		button.press() 
+
 	move_and_slide()
 	
 func _on_zone_detection_body_entered(body : Node2D):
-	if body is Caillou:
-		print("c'est un caillou")
-	else :
-		print("c'est pas un caillou")
-	return
+	if body is PhysiqueButton:
+		print("j'ai un bouton")
+		button = body
+
 	
 func _on_zone_detection_body_exited (body : Node2D):
-	if body is Caillou:
-		print("c'est pas un caillou")
-	return
+	if body == button:
+		print("J'ai oublié le bouton")
+		
+		button = null

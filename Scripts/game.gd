@@ -1,8 +1,6 @@
 extends Node2D
 
 var emplacement = 2
-signal retour
-signal sorti
 
 @onready var player : Node2D = $Node2D
 @onready var camera : Camera2D = $Camera2D
