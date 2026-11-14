@@ -18,7 +18,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if (rooms[indice].all_placed()&&indice<len(rooms)-1):
 		rooms[indice].show_next_button()
-
 func move_to_prev():
 	rooms[indice].visible=false
 	indice-=1

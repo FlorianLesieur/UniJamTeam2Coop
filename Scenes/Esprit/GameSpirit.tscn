@@ -2,8 +2,20 @@
 
 [ext_resource type="Script" uid="uid://3cs83e4iui5w" path="res://Scripts/Esprit/GameSpirit.gd" id="1_3utc4"]
 [ext_resource type="PackedScene" uid="uid://c4vpmm2hwe3j2" path="res://Scenes/Esprit/RoomSpirit.tscn" id="2_3ahv2"]
+[ext_resource type="Texture2D" uid="uid://cpaqlccniw7c6" path="res://Assets/Esprit/Maps/Map_1.png" id="3_ppguh"]
+[ext_resource type="Texture2D" uid="uid://b2onp7e1qovco" path="res://Assets/Esprit/Pillars/White_Pillar_Top.png" id="4_3ahv2"]
 [ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="4_tldpl"]
 [ext_resource type="Script" uid="uid://dq8d15t07mjj" path="res://Scripts/Esprit/Piece.gd" id="5_3ahv2"]
+[ext_resource type="Texture2D" uid="uid://i76a5i82rd2h" path="res://Assets/Esprit/Maps/Map_2.png" id="6_tldpl"]
+[ext_resource type="Texture2D" uid="uid://d1dd4cmxnbjne" path="res://Assets/Esprit/Pillars/X_Pillar_Top.png" id="8_fhdtl"]
+[ext_resource type="Texture2D" uid="uid://ce5xacky5r3rb" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top.png" id="9_8ol5l"]
+
+[sub_resource type="Gradient" id="Gradient_c0dwe"]
+offsets = PackedFloat32Array(0.006024096, 0.43975905, 0.48795182, 1)
+colors = PackedColorArray(0.24096386, 0.24096386, 0.24096386, 1, 0.43975905, 0.43975905, 0.43975905, 1, 0, 0, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jyycw"]
+gradient = SubResource("Gradient_c0dwe")
 
 [node name="GameSpirit" type="Control" unique_id=1736079434 node_paths=PackedStringArray("rooms")]
 layout_mode = 3
@@ -13,58 +25,106 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3utc4")
-rooms = [NodePath("RoomSpirit"), NodePath("RoomSpirit2"), NodePath("RoomSpirit3")]
+rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("RoomSpirit3")]
 
-[node name="RoomSpirit" parent="." unique_id=522636664 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940475652]
+visible = false
+position = Vector2(488, 269)
+scale = Vector2(6826.9907, 1018.93976)
+texture = SubResource("GradientTexture1D_jyycw")
+
+[node name="Room1" parent="." unique_id=522636664 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 visible = false
 layout_mode = 1
-pieces = [NodePath("Piece")]
+pieces = [NodePath("White_Pillar")]
+keys = Array[Vector2]([Vector2(-10, -20)])
 
-[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit" unique_id=90563721]
-position = Vector2(511, 264)
-texture = ExtResource("4_tldpl")
+[node name="Map1" type="Sprite2D" parent="Room1" unique_id=653288189]
+position = Vector2(588, 332.00003)
+scale = Vector2(0.79999995, 0.79999995)
+texture = ExtResource("3_ppguh")
 
-[node name="Piece" type="Button" parent="RoomSpirit" unique_id=727971869]
+[node name="White_Pillar" type="Button" parent="Room1" unique_id=727971869]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("4_tldpl")
+offset_left = 360.0
+offset_top = 492.0
+offset_right = 460.0
+offset_bottom = 593.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="RoomSpirit2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+[node name="TextureRect" type="TextureRect" parent="Room1/White_Pillar" unique_id=1275699926]
 layout_mode = 1
-pieces = [NodePath("Piece"), NodePath("Piece2")]
-keys = Array[Vector2]([Vector2(300, 250), Vector2(700, 250)])
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.5
+offset_right = 717.0
+offset_bottom = 725.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("4_3ahv2")
 
-[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit2" unique_id=724058428]
-position = Vector2(300, 250)
+[node name="Room2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+layout_mode = 1
+pieces = [NodePath("Diamond"), NodePath("Piece2"), NodePath("Piece3")]
+keys = Array[Vector2]([Vector2(300, 250), Vector2(700, 250), Vector2(0, 0)])
+
+[node name="Map2" type="Sprite2D" parent="Room2" unique_id=2039060626]
+position = Vector2(569, 318)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_tldpl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Room2" unique_id=724058428]
+position = Vector2(-97, 356)
 texture = ExtResource("4_tldpl")
 
-[node name="Sprite2D5" type="Sprite2D" parent="RoomSpirit2" unique_id=368042144]
-position = Vector2(700, 250)
-texture = ExtResource("4_tldpl")
-
-[node name="Piece2" type="Button" parent="RoomSpirit2" unique_id=1560612433]
+[node name="Piece2" type="Button" parent="Room2" unique_id=1560612433]
 layout_mode = 0
 offset_left = 631.0
 offset_top = 352.0
-offset_right = 767.0
-offset_bottom = 488.0
-icon = ExtResource("4_tldpl")
+offset_right = 731.0
+offset_bottom = 452.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="Piece" type="Button" parent="RoomSpirit2" unique_id=780075951]
+[node name="TextureRect" type="TextureRect" parent="Room2/Piece2" unique_id=1950855557]
 layout_mode = 0
-offset_left = 250.0
-offset_top = 375.0
-offset_right = 386.0
-offset_bottom = 511.0
-icon = ExtResource("4_tldpl")
+offset_left = -414.0
+offset_top = -167.0
+offset_right = 353.0
+offset_bottom = 609.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("8_fhdtl")
+
+[node name="Diamond" type="Button" parent="Room2" unique_id=780075951]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 378.0
+offset_right = 442.0
+offset_bottom = 478.0
 flat = true
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="TextureRect" type="TextureRect" parent="Room2/Diamond" unique_id=111133853]
+layout_mode = 0
+offset_left = -9.0
+offset_right = 758.0
+offset_bottom = 776.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("9_8ol5l")
+
+[node name="Piece3" type="Button" parent="Room2" unique_id=1239340210]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 

@@ -1,11 +1,6 @@
 [gd_scene format=3 uid="uid://d3w2uuf2v2wod"]
 
-[ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/Physique/Room/Room1.gd" id="1_rqtq1"]
-[ext_resource type="Texture2D" uid="uid://b8jr3wqtgh43u" path="res://Assets/Physique/Room/RoomA.png" id="1_uiu0h"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_p1u0y"]
-a = Vector2(193, 341)
-b = Vector2(193, 429)
+[ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/Physique/Room/Room.gd" id="1_ronr4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(100, 100)
@@ -38,20 +33,8 @@ a = Vector2(193, 417)
 b = Vector2(196, 652)
 
 [node name="Room" type="Node2D" unique_id=1018444833]
-script = ExtResource("1_rqtq1")
+script = ExtResource("1_ronr4")
 metadata/_custom_type_script = "uid://3ikvys6b1miu"
-
-[node name="BackGround" type="Sprite2D" parent="." unique_id=1459927994]
-position = Vector2(579.99994, 381)
-scale = Vector2(7, 7)
-texture = ExtResource("1_uiu0h")
-
-[node name="PorteEntree" type="StaticBody2D" parent="." unique_id=1472512313]
-collision_layer = 0
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PorteEntree" unique_id=510603109]
-shape = SubResource("SegmentShape2D_p1u0y")
 
 [node name="Entree" type="Area2D" parent="." unique_id=1835958162]
 position = Vector2(114, 370)

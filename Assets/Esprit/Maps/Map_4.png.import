@@ -2,12 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwu30jci2kq7l"
-valid=false
+<<<<<<< HEAD
+uid="uid://da2oknrwtqijd"
+=======
+uid="uid://cmitc4nd1e1lt"
+>>>>>>> 3faf9e3 (chore: button code for physic room 2)
+path="res://.godot/imported/Map_4.png-1fdec803f3c257dc774796dbf5236f29.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Esprit/Pillars/T_Pillar_Top.png"
+source_file="res://Assets/Esprit/Maps/Map_4.png"
+dest_files=["res://.godot/imported/Map_4.png-1fdec803f3c257dc774796dbf5236f29.ctex"]
 
 [params]
 
