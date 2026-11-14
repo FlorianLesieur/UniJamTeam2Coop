@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://df6fkvfojosd4"]
+
+[ext_resource type="PackedScene" uid="uid://cnj2oa0mr1voc" path="res://Scenes/TestVincent/node_2d.tscn" id="1_cf4q2"]
+[ext_resource type="PackedScene" uid="uid://d3w2uuf2v2wod" path="res://Scenes/TestVincent/Room.tscn" id="2_xbb3c"]
+
+[node name="Game" type="Node2D" unique_id=2019292241]
+
+[node name="Node2D" parent="." unique_id=762492996 instance=ExtResource("1_cf4q2")]
+scale = Vector2(0.5, 0.5)
+
+[node name="Room" parent="." unique_id=1387040029 instance=ExtResource("2_xbb3c")]
