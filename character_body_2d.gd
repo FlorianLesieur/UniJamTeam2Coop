@@ -26,8 +26,6 @@ func _on_zone_detection_body_entered(body : Node2D):
 	return
 	
 func _on_zone_detection_body_exited (body : Node2D):
-	if body is not Caillou:
+	if body is Caillou:
 		print("c'est pas un caillou")
-	else :
-		print("c'est un caillou")
 	return
