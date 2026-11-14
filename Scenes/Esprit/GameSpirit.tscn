@@ -33,21 +33,34 @@ offset_bottom = 285.0
 
 [node name="RoomSpirit2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 layout_mode = 1
-pieces = [NodePath("Piece4")]
-keys = Array[Vector2]([Vector2(300, 250)])
+pieces = [NodePath("Piece4"), NodePath("Piece")]
+keys = Array[Vector2]([Vector2(300, 250), Vector2(700, 250)])
 
 [node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit2" unique_id=724058428]
 position = Vector2(300, 250)
 texture = ExtResource("4_tldpl")
 
+[node name="Sprite2D5" type="Sprite2D" parent="RoomSpirit2" unique_id=368042144]
+position = Vector2(700, 250)
+texture = ExtResource("4_tldpl")
+
 [node name="Piece4" parent="RoomSpirit2" unique_id=63451767 instance=ExtResource("3_ppguh")]
 layout_mode = 0
-offset_left = 137.0
-offset_top = 149.0
-offset_right = 273.0
-offset_bottom = 285.0
+offset_left = 401.0
+offset_top = 326.0
+offset_right = 537.0
+offset_bottom = 462.0
+
+[node name="Piece" parent="RoomSpirit2" unique_id=1029714850 instance=ExtResource("3_ppguh")]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 392.0
+offset_right = 933.0
+offset_bottom = 528.0
+text = "2"
 
 [node name="RoomSpirit3" parent="." unique_id=1809866431 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+visible = false
 layout_mode = 1
 pieces = [NodePath("Piece4")]
 keys = Array[Vector2]([Vector2(400, 250)])
