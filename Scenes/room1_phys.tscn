@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cvamot06ni640"]
+
+[ext_resource type="Texture2D" uid="uid://b8jr3wqtgh43u" path="res://Assets/Physique/Room/RoomA.png" id="1_3db37"]
+[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/door.gd" id="2_kam1a"]
+[ext_resource type="Script" path="res://Scripts/openDoor.gd" id="2_m3nao"]
+[ext_resource type="Texture2D" uid="uid://ce272n7t3w65d" path="res://Assets/Physique/Porte.png" id="2_nha7b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa0vk"]
+size = Vector2(9, 13.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5etin"]
+size = Vector2(121, 170.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3nao"]
+size = Vector2(88.5, 467)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kam1a"]
+size = Vector2(976.5, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ctl4"]
+size = Vector2(77.5, 282)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eipi"]
+size = Vector2(1049, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohnqy"]
+size = Vector2(79.5, 193)
+
+[node name="room1Phys" type="Node2D" unique_id=1686764703]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=695830934]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2062283416]
+texture_filter = 1
+position = Vector2(2.8014183e-05, 5.6028366e-06)
+scale = Vector2(8, 5.7857146)
+texture = ExtResource("1_3db37")
+script = ExtResource("2_m3nao")
+
+[node name="door" type="StaticBody2D" parent="Sprite2D" unique_id=580521522]
+script = ExtResource("2_kam1a")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/door" unique_id=307048637]
+texture_filter = 1
+position = Vector2(59.01978, -9.685755e-07)
+scale = Vector2(0.99752706, 1.008067)
+texture = ExtResource("2_nha7b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/door" unique_id=321035132]
+position = Vector2(59.5, 0.4375)
+shape = SubResource("RectangleShape2D_aa0vk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1705208042]
+position = Vector2(253, -112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=189413513]
+position = Vector2(1, -43.75)
+shape = SubResource("RectangleShape2D_5etin")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1135679675]
+position = Vector2(2, 237)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2" unique_id=266280869]
+position = Vector2(-490.25, -240.5)
+shape = SubResource("RectangleShape2D_m3nao")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2" unique_id=273633424]
+position = Vector2(-42.75, -516.5)
+shape = SubResource("RectangleShape2D_kam1a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2" unique_id=800640822]
+position = Vector2(481.75, -413)
+shape = SubResource("RectangleShape2D_4ctl4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=770762787]
+position = Vector2(-1, 16)
+shape = SubResource("RectangleShape2D_3eipi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=781794768]
+position = Vector2(482.75, -101.5)
+shape = SubResource("RectangleShape2D_ohnqy")
+
+[connection signal="OpenDoor" from="Sprite2D/door" to="Sprite2D" method="_on_door_open_door"]
