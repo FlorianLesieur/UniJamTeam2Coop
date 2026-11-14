@@ -1,6 +1,6 @@
 extends Node
 
-@onready var physical : Node2D = $GamePhysical
+@onready var physical : Node2D = $Game
 @onready var spirit : Control = $GameSpirit
 @onready var menu : Control = $MainMenu
 
