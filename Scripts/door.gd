@@ -1,5 +1,7 @@
 extends Node
 
+class_name Door
+
 # When you receive OpenDoor, delete this node to remove its hitbox
 
 signal OpenDoor
