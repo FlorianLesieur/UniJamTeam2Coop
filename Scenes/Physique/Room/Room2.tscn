@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/Physique/Room/Room.gd" id="1_511yp"]
 [ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/Physique/Door.gd" id="3_2tutk"]
 [ext_resource type="Texture2D" uid="uid://ce272n7t3w65d" path="res://Assets/Physique/Porte.png" id="4_w3e7n"]
+[ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="6_1q34m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa0vk"]
 size = Vector2(74, 70)
@@ -39,4 +40,6 @@ position = Vector2(-4.0000277, -0.4999995)
 scale = Vector2(7.9999967, 5.8125)
 texture = ExtResource("4_w3e7n")
 
-[connection signal="OpenDoor" from="Node2D/door" to="Node2D" method="_on_door_open_door"]
+[node name="PhysiqueButton" parent="Node2D" unique_id=1878903987 instance=ExtResource("6_1q34m")]
+
+[connection signal="pressed" from="Node2D/PhysiqueButton" to="Node2D" method="ButtonPressed"]
