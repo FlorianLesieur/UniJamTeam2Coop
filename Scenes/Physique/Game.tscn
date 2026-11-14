@@ -3,38 +3,31 @@
 [ext_resource type="Script" uid="uid://djpf74e6r58bs" path="res://Scripts/game.gd" id="1_4ndsd"]
 [ext_resource type="PackedScene" uid="uid://r3ngush7wxm5" path="res://Scenes/Physique/Room/Room1.tscn" id="2_xbb3c"]
 [ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/Physique/player.tscn" id="3_53bud"]
-[ext_resource type="PackedScene" uid="uid://qxxew0mca61x" path="res://Scenes/Physique/Torche.tscn" id="4_5stio"]
+[ext_resource type="PackedScene" uid="uid://dw8m0xgaw6d8a" path="res://Scenes/Physique/Room/Room2.tscn" id="4_cao1l"]
+[ext_resource type="PackedScene" uid="uid://cu78rpeushco3" path="res://Scenes/Physique/Room/Room3.tscn" id="5_p88y0"]
 
 [node name="Game" type="Node2D" unique_id=2019292241 node_paths=PackedStringArray("rooms")]
 script = ExtResource("1_4ndsd")
-rooms = [null]
+rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1326329655]
+position = Vector2(589, 326)
 
 [node name="Room1" parent="." unique_id=744245850 instance=ExtResource("2_xbb3c")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1326329655]
-position = Vector2(583, 384)
+[node name="Room2" parent="." unique_id=1381781980 instance=ExtResource("4_cao1l")]
+position = Vector2(2000, 0)
+
+[node name="Room3" parent="." unique_id=97531073 instance=ExtResource("5_p88y0")]
+position = Vector2(4000, 0)
 
 [node name="Player" parent="." unique_id=663629846 instance=ExtResource("3_53bud")]
-position = Vector2(362, 297)
+position = Vector2(500, 350)
 scale = Vector2(0.5, 0.5)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=852092512]
-color = Color(0.11119685, 0.11119684, 0.11119684, 1)
-
-[node name="Torches" type="Node2D" parent="." unique_id=1749024178]
-
-[node name="Torche" parent="Torches" unique_id=1524118317 instance=ExtResource("4_5stio")]
-position = Vector2(579, 42)
-side = "nord"
-
-[node name="Torche2" parent="Torches" unique_id=101909505 instance=ExtResource("4_5stio")]
-position = Vector2(173, 222)
-side = "ouest"
-
-[node name="Torche3" parent="Torches" unique_id=712236123 instance=ExtResource("4_5stio")]
-position = Vector2(172, 510)
-side = "ouest"
-
-[node name="Torche5" parent="Torches" unique_id=1988223007 instance=ExtResource("4_5stio")]
-position = Vector2(993, 508)
-side = "est"
+[connection signal="retour" from="Room1" to="." method="_on_room_retour"]
+[connection signal="sorti" from="Room1" to="." method="_on_room_sorti"]
+[connection signal="retour" from="Room2" to="." method="_on_room_retour"]
+[connection signal="sorti" from="Room2" to="." method="_on_room_sorti"]
+[connection signal="retour" from="Room3" to="." method="_on_room_retour"]
+[connection signal="sorti" from="Room3" to="." method="_on_room_sorti"]

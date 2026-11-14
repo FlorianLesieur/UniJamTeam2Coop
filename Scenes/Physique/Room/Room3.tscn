@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cu78rpeushco3"]
 
-[ext_resource type="Texture2D" uid="uid://dv3wnejsp4ue4" path="res://Assets/Physique/Room/RoomC.png" id="1_cv2v0"]
+[ext_resource type="Texture2D" uid="uid://iiydmjce1tcq" path="res://Assets/Physique/Room/RoomC.png" id="1_cv2v0"]
+[ext_resource type="Script" uid="uid://djnlg6b7w26uv" path="res://Scripts/Physique/Room/room_1.gd" id="1_mbsnw"]
 [ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="4_xr5d2"]
 [ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="5_c82h5"]
-[ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/Physique/player.tscn" id="6_0w3xs"]
 [ext_resource type="PackedScene" uid="uid://bngjoynr7njsx" path="res://Scenes/Physique/Room/BigRoom.tscn" id="6_mbsnw"]
+[ext_resource type="PackedScene" uid="uid://qxxew0mca61x" path="res://Scenes/Physique/Torche.tscn" id="7_mbsnw"]
 [ext_resource type="Script" uid="uid://c1jkhu1ny8lco" path="res://Scripts/Physique/Room/Room3.gd" id="7_xr5d2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4v7s"]
@@ -91,7 +92,9 @@ b = Vector2(855, 617)
 a = Vector2(858, 328)
 b = Vector2(963, 328)
 
-[node name="Room3" type="Node2D" unique_id=744245850]
+[node name="Room3" type="Node2D" unique_id=2070320622]
+script = ExtResource("1_mbsnw")
+metadata/_custom_type_script = "uid://3ikvys6b1miu"
 
 [node name="RoomC" type="Sprite2D" parent="." unique_id=1043357016]
 position = Vector2(583.00006, 345)
@@ -216,8 +219,25 @@ shape = SubResource("SegmentShape2D_vfslc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D21" unique_id=793362991]
 shape = SubResource("SegmentShape2D_1me0x")
 
-[node name="Player" parent="." unique_id=663629846 instance=ExtResource("6_0w3xs")]
-position = Vector2(462, 302)
-scale = Vector2(0.5, 0.5)
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1534803307]
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[node name="Torches" type="Node2D" parent="." unique_id=1604373627]
+
+[node name="Torche" parent="Torches" unique_id=1524118317 instance=ExtResource("7_mbsnw")]
+position = Vector2(225, 413)
+side = "nord"
+
+[node name="Torche2" parent="Torches" unique_id=193416505 instance=ExtResource("7_mbsnw")]
+position = Vector2(700, 133)
+side = "ouest"
+
+[node name="Torche3" parent="Torches" unique_id=1844381025 instance=ExtResource("7_mbsnw")]
+position = Vector2(558, 323)
+side = "ouest"
+
+[node name="Torche5" parent="Torches" unique_id=1361558518 instance=ExtResource("7_mbsnw")]
+position = Vector2(865, 699)
+side = "est"
 
 [connection signal="pressed" from="Room3/buttonDoor" to="Room3" method="_open_door"]
