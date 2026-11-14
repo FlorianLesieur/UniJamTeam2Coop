@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://21myfky7ifbo"]
 
 [ext_resource type="Script" uid="uid://c7mx22u13m6qu" path="res://Scripts/Esprit/RoomSpirit.gd" id="1_efe7i"]
+[ext_resource type="Texture2D" uid="uid://dubbnlgf0trml" path="res://Assets/Esprit/Controls/Change room left.png" id="2_38r1x"]
 
 [node name="Room5" type="Control" unique_id=1121321171]
 layout_mode = 3
@@ -14,11 +15,18 @@ script = ExtResource("1_efe7i")
 [node name="Button3" type="Button" parent="." unique_id=1500516357]
 z_index = 2
 layout_mode = 0
-offset_left = 10.999999
-offset_top = 201.00002
-offset_right = 19.0
-offset_bottom = 209.00002
-scale = Vector2(20, 24)
+offset_left = 10.0
+offset_top = 229.0
+offset_right = 140.0
+offset_bottom = 359.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Button3" unique_id=1621031301]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_38r1x")
 
 [node name="Button" type="Button" parent="." unique_id=990694448]
 z_index = 2

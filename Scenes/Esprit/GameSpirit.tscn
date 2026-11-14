@@ -192,6 +192,7 @@ script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
 [node name="Room5" parent="." unique_id=1121321171 node_paths=PackedStringArray("pieces") instance=ExtResource("12_km8cv")]
+visible = false
 layout_mode = 1
 script = ExtResource("13_fgjyx")
 pieces = [NodePath("Semi_Circle"), NodePath("Rhombus"), NodePath("Square"), NodePath("Triangle")]
