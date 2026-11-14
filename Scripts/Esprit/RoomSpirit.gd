@@ -13,6 +13,7 @@ func _ready() -> void:
 	for i in range(len(keys)):
 		pieces[i].pos_key=keys[i]
 		placed.append(false)
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

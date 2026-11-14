@@ -15,7 +15,8 @@ var seuil = 2500 #La distance est renvoyé AU CARRE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	button_down.connect(_on_button_down)
+	button_up.connect(_on_button_up)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4vpmm2hwe3j2"]
 
-[ext_resource type="Script" uid="uid://c7mx22u13m6qu" path="res://Scripts/RoomSpirit.gd" id="1_63x8c"]
+[ext_resource type="Script" uid="uid://c7mx22u13m6qu" path="res://Scripts/Esprit/RoomSpirit.gd" id="1_63x8c"]
 
 [node name="RoomSpirit" type="Control" unique_id=804344434 node_paths=PackedStringArray("pieces")]
 layout_mode = 3
