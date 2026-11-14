@@ -22,7 +22,7 @@ offset_top = 16.0
 offset_right = 88.0
 offset_bottom = 56.0
 
-[node name="Button" type="Button" parent="." unique_id=286498907]
+[node name="Button" type="Button" parent="." unique_id=1531267939]
 layout_mode = 0
 offset_left = 226.0
 offset_top = 46.0
@@ -31,6 +31,7 @@ offset_bottom = 86.0
 scale = Vector2(10.402628, 2.731142)
 toggle_mode = true
 script = ExtResource("1_yug5r")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
 [node name="Icon" type="Sprite2D" parent="Button" unique_id=1117698301]
 position = Vector2(10.38199, 45.40225)
