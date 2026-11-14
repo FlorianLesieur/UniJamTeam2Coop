@@ -32,7 +32,6 @@ func _process(delta: float) -> void:
 		if (position_visee.y>pos_max_y-goutière):
 			position_visee.y=pos_max_y-goutière
 		position = lerp(position, position_visee, delta * speed)
-		print("position : ",position)
 		#position.x=move_toward(position.x,position.x-pos_x_pressed+position_souris.x,delta*speed)
 		#position.y=move_toward(position.y,position.y-pos_y_pressed+position_souris.y,delta*speed)
 
