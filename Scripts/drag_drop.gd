@@ -2,7 +2,7 @@ extends Button
 class_name Piece
 
 var moving := false
-var speed= 128
+var speed= 64
 var pos_pressed := Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +16,8 @@ func _process(delta: float) -> void:
 		position = lerp(position, position - pos_pressed + position_souris, delta * speed)
 		#position.x=move_toward(position.x,position.x-pos_x_pressed+position_souris.x,delta*speed)
 		#position.y=move_toward(position.y,position.y-pos_y_pressed+position_souris.y,delta*speed)
+		print(position)
+		print(speed)
 
 
 
