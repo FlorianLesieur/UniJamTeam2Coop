@@ -15,6 +15,8 @@ func _physics_process(delta: float) -> void:
 	else :
 		velocity = Vector2.ZERO
 
-
-
 	move_and_slide()
+	
+func _on_zone_detection_body_entered(body : Node2D):
+	if !body is Levier:
+		return
