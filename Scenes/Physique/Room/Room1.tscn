@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://r3ngush7wxm5"]
 
+[ext_resource type="Script" uid="uid://bp4qnkxbqalns" path="res://Scripts/Physique/Room/SupportRoom.gd" id="1_iclru"]
 [ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/Physique/Room/Room1.gd" id="1_rqtq1"]
 [ext_resource type="Texture2D" uid="uid://b8jr3wqtgh43u" path="res://Assets/Physique/Room/RoomA.png" id="1_uiu0h"]
 [ext_resource type="PackedScene" uid="uid://d3w2uuf2v2wod" path="res://Scenes/Physique/Room/Room.tscn" id="2_ac2h6"]
 [ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="3_catfe"]
 [ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="5_rqtq1"]
 
-[node name="Room1" type="Node2D" unique_id=744245850]
+[node name="Room1" type="Node2D" unique_id=858481737]
+script = ExtResource("1_iclru")
+metadata/_custom_type_script = "uid://bp4qnkxbqalns"
 
 [node name="RoomA" type="Sprite2D" parent="." unique_id=227735088]
 position = Vector2(581.00006, 370.00003)
@@ -23,4 +26,35 @@ position = Vector2(989, 373)
 position = Vector2(990.0001, 376)
 scale = Vector2(7, 7)
 
+<<<<<<< Updated upstream
+=======
+[node name="door2" parent="Room" unique_id=377081323 instance=ExtResource("3_catfe")]
+position = Vector2(164.99998, 374)
+rotation = 3.1415927
+scale = Vector2(7, 7)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1302992237]
+visible = false
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[node name="Torches" type="Node2D" parent="." unique_id=2137305161]
+visible = false
+
+[node name="Torche" parent="Torches" unique_id=1524118317 instance=ExtResource("7_lwdc6")]
+position = Vector2(579, 42)
+side = "nord"
+
+[node name="Torche2" parent="Torches" unique_id=567333524 instance=ExtResource("7_lwdc6")]
+position = Vector2(173, 222)
+side = "ouest"
+
+[node name="Torche3" parent="Torches" unique_id=1045719538 instance=ExtResource("7_lwdc6")]
+position = Vector2(172, 510)
+side = "ouest"
+
+[node name="Torche5" parent="Torches" unique_id=379954661 instance=ExtResource("7_lwdc6")]
+position = Vector2(993, 508)
+side = "est"
+
+>>>>>>> Stashed changes
 [connection signal="pressed" from="Room/buttonDoor" to="Room" method="OpenDoor"]
