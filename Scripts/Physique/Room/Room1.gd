@@ -1,14 +1,11 @@
 extends Room
 
-signal OpenDoor
+
 
 @onready var door : Door = $door
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	door.visible = true
+@onready var buttonDoor : PhysiqueButton = $buttonDoor
 
 
-
-func _on_door_open_door() -> void:
-	door.visible = false # Replace with function body.
+func OpenDoor() -> void:
+	door.queue_free()
+	buttonDoor.queue_free()

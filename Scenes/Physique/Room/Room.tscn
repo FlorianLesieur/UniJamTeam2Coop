@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/Physique/Room/Room1.gd" id="1_rqtq1"]
 [ext_resource type="Texture2D" uid="uid://b8jr3wqtgh43u" path="res://Assets/Physique/Room/RoomA.png" id="1_uiu0h"]
-[ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="3_catfe"]
-[ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/TestVincent/player.tscn" id="4_uiu0h"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p1u0y"]
 a = Vector2(193, 341)
@@ -17,7 +15,7 @@ size = Vector2(100, 100)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4v7s"]
 a = Vector2(962, 103)
-b = Vector2(968, 329)
+b = Vector2(966, 326)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_57qmd"]
 a = Vector2(127, 655)
@@ -25,7 +23,7 @@ b = Vector2(981, 655)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d0u6y"]
 a = Vector2(975, 658)
-b = Vector2(971, 429)
+b = Vector2(970, 436)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3gngh"]
 a = Vector2(965, 103)
@@ -39,7 +37,7 @@ b = Vector2(193, 335)
 a = Vector2(193, 417)
 b = Vector2(196, 652)
 
-[node name="Room1" type="Node2D" unique_id=1018444833]
+[node name="Room" type="Node2D" unique_id=1018444833]
 script = ExtResource("1_rqtq1")
 metadata/_custom_type_script = "uid://3ikvys6b1miu"
 
@@ -65,6 +63,7 @@ shape = SubResource("RectangleShape2D_yf5fn")
 position = Vector2(1034, 370)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sortie" unique_id=1594531728]
+position = Vector2(11, 5)
 shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="ExitSpawn" type="Node2D" parent="." unique_id=800696970]
@@ -108,13 +107,5 @@ shape = SubResource("SegmentShape2D_fcnqv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D6" unique_id=1150265019]
 shape = SubResource("SegmentShape2D_7numd")
 
-[node name="door" parent="." unique_id=1646548 instance=ExtResource("3_catfe")]
-position = Vector2(990.0001, 376)
-scale = Vector2(7, 7)
-
-[node name="Player" parent="." unique_id=873138412 instance=ExtResource("4_uiu0h")]
-position = Vector2(444, 369)
-
 [connection signal="body_entered" from="Entree" to="." method="_on_entree_body_entered"]
 [connection signal="body_entered" from="Sortie" to="." method="_on_sortie_body_entered"]
-[connection signal="OpenDoor" from="door" to="." method="_on_door_open_door"]

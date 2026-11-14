@@ -6,9 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csd5h"]
 size = Vector2(9, 13.125)
 
-[node name="door" type="StaticBody2D" unique_id=1646548]
-scale = Vector2(8, 5.7857146)
+[node name="Door" type="StaticBody2D" unique_id=1118860039]
 script = ExtResource("1_xprm8")
+metadata/_custom_type_script = "uid://bx6igbkca51n7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310924822]
 shape = SubResource("RectangleShape2D_csd5h")

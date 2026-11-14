@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://eq7c1uflbcm4"]
+
+[ext_resource type="Script" uid="uid://dyeu05wyp38gb" path="res://Scripts/Physique/PhysiqueButton.gd" id="1_1ifiq"]
+[ext_resource type="Texture2D" uid="uid://deyhjglgynokm" path="res://Assets/Physique/Button.png" id="1_dg2il"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(32, 32)
+
+[node name="PhysiqueButton" type="StaticBody2D" unique_id=1878903987]
+script = ExtResource("1_1ifiq")
+metadata/_custom_type_script = "uid://dyeu05wyp38gb"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1939680284]
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=441191951]
+position = Vector2(4.2915344e-06, 4.7683716e-07)
+scale = Vector2(8, 8)
+texture = ExtResource("1_dg2il")
