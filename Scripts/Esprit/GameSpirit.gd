@@ -21,8 +21,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
-	#if (rooms[indice].all_placed()&&indice<len(rooms)-1):
-		pass
+	if (indice<len(rooms)-1&&rooms[indice].all_placed()):
+		if (indice==1):
+			$Room2/X/reveal.visible=true
+			$Room2/D/reveal.visible=true
+			$Room2/T/reveal.visible=true
 func move_to_prev():
 	if (indice==4):
 		rooms[indice].visible=false

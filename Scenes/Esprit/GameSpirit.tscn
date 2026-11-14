@@ -6,12 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://b2onp7e1qovco" path="res://Assets/Esprit/Pillars/White_Pillar_Top.png" id="4_3ahv2"]
 [ext_resource type="Script" uid="uid://dq8d15t07mjj" path="res://Scripts/Esprit/Piece.gd" id="5_3ahv2"]
 [ext_resource type="Texture2D" uid="uid://i76a5i82rd2h" path="res://Assets/Esprit/Maps/Map_2.png" id="6_tldpl"]
+[ext_resource type="Texture2D" uid="uid://cn6kdxanxcdbt" path="res://Assets/Esprit/Pillars/X_Pillar_Top_with_info_revealed.png" id="8_8wgek"]
 [ext_resource type="Texture2D" uid="uid://d1dd4cmxnbjne" path="res://Assets/Esprit/Pillars/X_Pillar_Top.png" id="8_fhdtl"]
 [ext_resource type="Texture2D" uid="uid://ce5xacky5r3rb" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top.png" id="9_8ol5l"]
 [ext_resource type="Texture2D" uid="uid://dt3xd2vtp550n" path="res://Assets/Esprit/Pillars/T_Pillar_Top.png" id="9_w5e7p"]
 [ext_resource type="Texture2D" uid="uid://b4skgf5lmasfl" path="res://Assets/Esprit/Maps/Map_3.png" id="10_8ol5l"]
+[ext_resource type="Texture2D" uid="uid://cjx8ox10y1f75" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top_with_info_revealed.png" id="10_38xxe"]
 [ext_resource type="Texture2D" uid="uid://cmitc4nd1e1lt" path="res://Assets/Esprit/Maps/Map_4.png" id="11_w5e7p"]
 [ext_resource type="PackedScene" uid="uid://21myfky7ifbo" path="res://Scenes/Esprit/Room5.tscn" id="12_km8cv"]
+[ext_resource type="Texture2D" uid="uid://drxf4gf1f0mg8" path="res://Assets/Esprit/Pillars/T_Pillar_Top_with_info_revealed.png" id="12_twiwv"]
 [ext_resource type="Script" uid="uid://bk7qvwldl5a7v" path="res://Scripts/Esprit/Room5.gd" id="13_fgjyx"]
 [ext_resource type="Texture2D" uid="uid://brqonfviibufl" path="res://Assets/Esprit/Maps/map_5.png" id="14_043if"]
 [ext_resource type="Texture2D" uid="uid://bvn8uw3foa00m" path="res://Assets/Esprit/Pillars/Semi_Circle_Pillar.png" id="15_abhwm"]
@@ -45,7 +48,6 @@ rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room
 room5 = NodePath("Room5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940475652]
-visible = false
 position = Vector2(488, 269)
 scale = Vector2(6826.9907, 1018.93976)
 texture = SubResource("GradientTexture1D_jyycw")
@@ -88,7 +90,6 @@ scale = Vector2(0.13, 0.13)
 texture = ExtResource("4_3ahv2")
 
 [node name="Room2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
-visible = false
 layout_mode = 1
 pieces = [NodePath("D"), NodePath("X"), NodePath("T")]
 keys = Array[Vector2]([Vector2(685, 533), Vector2(460, 229), Vector2(381, 426)])
@@ -108,12 +109,20 @@ flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="TextureRect" type="TextureRect" parent="Room2/X" unique_id=1950855557]
+[node name="no_reveal" type="TextureRect" parent="Room2/X" unique_id=1950855557]
 layout_mode = 0
 offset_right = 767.0
 offset_bottom = 776.0
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("8_fhdtl")
+
+[node name="reveal" type="TextureRect" parent="Room2/X" unique_id=1661364075]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("8_8wgek")
 
 [node name="D" type="Button" parent="Room2" unique_id=780075951]
 layout_mode = 0
@@ -125,12 +134,20 @@ flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="TextureRect" type="TextureRect" parent="Room2/D" unique_id=111133853]
+[node name="no_reveal" type="TextureRect" parent="Room2/D" unique_id=111133853]
 layout_mode = 0
 offset_right = 767.0
 offset_bottom = 776.0
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("9_8ol5l")
+
+[node name="reveal" type="TextureRect" parent="Room2/D" unique_id=416872342]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("10_38xxe")
 
 [node name="T" type="Button" parent="Room2" unique_id=1239340210]
 layout_mode = 0
@@ -142,12 +159,20 @@ flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
-[node name="TextureRect" type="TextureRect" parent="Room2/T" unique_id=1763598579]
+[node name="no_reveal" type="TextureRect" parent="Room2/T" unique_id=1763598579]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("9_w5e7p")
+
+[node name="reveal" type="TextureRect" parent="Room2/T" unique_id=702290968]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("12_twiwv")
 
 [node name="Room3" parent="." unique_id=1809866431 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 visible = false
