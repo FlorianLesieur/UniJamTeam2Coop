@@ -19,7 +19,7 @@ position = Vector2(362, 297)
 scale = Vector2(0.5, 0.5)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=852092512]
-color = Color(0.3291585, 0.32915837, 0.32915837, 1)
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
 
 [node name="Torches" type="Node2D" parent="." unique_id=1749024178]
 
