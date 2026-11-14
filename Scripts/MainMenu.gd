@@ -1,15 +1,11 @@
 extends Control
 class_name MainMenu
 
-signal physicPlay
-signal espritPlay
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
 
 
-
-
-func _on_selection_esprit_choose() -> void:
-	espritPlay.emit()
-
-
-func _on_selection_physique_choose() -> void:
-	physicPlay.emit()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

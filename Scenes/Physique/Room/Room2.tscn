@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://dw8m0xgaw6d8a"]
 
-[ext_resource type="Script" uid="uid://bp4qnkxbqalns" path="res://Scripts/Physique/Room/SupportRoom.gd" id="1_1q34m"]
 [ext_resource type="Texture2D" uid="uid://x3o05uuhd83m" path="res://Assets/Physique/Room/RoomB.png" id="1_3wdmx"]
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/Physique/Room/Room1.gd" id="1_7cnb6"]
 [ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/Physique/Room/Room.gd" id="1_511yp"]
 [ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/Physique/Door.gd" id="3_2tutk"]
@@ -10,19 +8,11 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa0vk"]
 size = Vector2(74, 70)
-=======
-[ext_resource type="Script" uid="uid://8awka03mo0ap" path="res://Scripts/Physique/Room/Room2.gd" id="2_1q34m"]
-[ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="6_1q34m"]
-[ext_resource type="PackedScene" uid="uid://d3w2uuf2v2wod" path="res://Scenes/Physique/Room/Room.tscn" id="6_s1xa5"]
-[ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="6_x1sat"]
-[ext_resource type="Script" uid="uid://dsge1puu5afj8" path="res://Scripts/Physique/PhysiqueButtonRoom2.gd" id="7_x1sat"]
->>>>>>> Stashed changes
 
-[node name="Room2" type="Node2D" unique_id=1518577394]
-script = ExtResource("1_1q34m")
-metadata/_custom_type_script = "uid://bp4qnkxbqalns"
+[node name="Room2" type="Node2D" unique_id=1381781980]
+script = ExtResource("1_511yp")
+metadata/_custom_type_script = "uid://3ikvys6b1miu"
 
-<<<<<<< Updated upstream
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1157344240]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1927648344]
@@ -50,27 +40,3 @@ scale = Vector2(7.9999967, 5.8125)
 texture = ExtResource("4_w3e7n")
 
 [connection signal="OpenDoor" from="Node2D/door" to="Node2D" method="_on_door_open_door"]
-=======
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=753027201]
-position = Vector2(588.99994, 379.99997)
-scale = Vector2(7, 7)
-texture = ExtResource("1_3wdmx")
-
-[node name="Room" parent="." unique_id=1018444833 instance=ExtResource("6_s1xa5")]
-script = ExtResource("2_1q34m")
-defaultLit = true
-
-[node name="PhysiqueButton" parent="Room" unique_id=1878903987 instance=ExtResource("6_1q34m")]
-position = Vector2(1003, 257)
-script = ExtResource("7_x1sat")
-
-[node name="Timer" type="Timer" parent="Room/PhysiqueButton" unique_id=2043119959]
-one_shot = true
-
-[node name="Door" parent="Room" unique_id=1118860039 instance=ExtResource("6_x1sat")]
-position = Vector2(996.99994, 379.99997)
-scale = Vector2(7, 7)
-
-[connection signal="pressed" from="Room/PhysiqueButton" to="Room" method="GetButton"]
-[connection signal="timeout" from="Room/PhysiqueButton/Timer" to="Room/PhysiqueButton" method="_on_timeout"]
->>>>>>> Stashed changes

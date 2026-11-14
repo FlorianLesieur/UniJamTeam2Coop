@@ -1,40 +1,21 @@
 extends Node2D
-class_name Game
 
-var emplacement = 1
+var emplacement = 2
 
 @onready var player : Node2D = $Player
 @onready var camera : Camera2D = $Camera2D
 
-@export var rooms : Array[SupportRoom]
+@export var rooms : Array[Room]
 
-<<<<<<< Updated upstream
 func _on_room_retour() -> void:
-=======
-@export var isOnDefaultLit = true
-
-func _ready() -> void:
-	camera.position = rooms[0].getMiddle()
-	for room in rooms :
-		room.retour.connect(room_retour)
-		room.sorti.connect(room_sorti)
-
-func room_retour() -> void:
-	if emplacement == 1 :
-		return
-	
->>>>>>> Stashed changes
 	emplacement -= 1
 	print(emplacement)
-	player.position = rooms[emplacement-1].getExit()
-	camera.position = rooms[emplacement-1].getMiddle()
+	player.position = rooms[emplacement-1].exit
+	camera.position = rooms[emplacement-1].middle
 
 
-func room_sorti() -> void:
-	if emplacement == rooms.size() :
-		return
-	
+func _on_room_sorti() -> void:
 	emplacement += 1
 	print(emplacement)
-	player.position = rooms[emplacement-1].getEntry()
-	camera.position = rooms[emplacement-1].getMiddle()
+	player.position = rooms[emplacement-1].entry
+	camera.position = rooms[emplacement-1].middle
