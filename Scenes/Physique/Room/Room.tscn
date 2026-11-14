@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d3w2uuf2v2wod"]
 
 [ext_resource type="Script" uid="uid://3ikvys6b1miu" path="res://Scripts/Physique/Room/Room.gd" id="1_ronr4"]
+[ext_resource type="Texture2D" uid="uid://b8jr3wqtgh43u" path="res://Assets/Physique/Room/RoomA.png" id="2_ronr4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(100, 100)
@@ -35,6 +36,11 @@ b = Vector2(196, 652)
 [node name="Room" type="Node2D" unique_id=1018444833]
 script = ExtResource("1_ronr4")
 metadata/_custom_type_script = "uid://3ikvys6b1miu"
+
+[node name="RoomA" type="Sprite2D" parent="." unique_id=1312886272]
+position = Vector2(577, 384)
+scale = Vector2(7, 7)
+texture = ExtResource("2_ronr4")
 
 [node name="Entree" type="Area2D" parent="." unique_id=1835958162]
 position = Vector2(114, 370)

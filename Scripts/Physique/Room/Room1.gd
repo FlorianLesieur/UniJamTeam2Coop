@@ -12,3 +12,7 @@ func ButtonPressed() -> void:
 	
 	door.queue_free()
 	buttonDoor.queue_free()
+
+
+func _open_door() -> void:
+	pass # Replace with function body.

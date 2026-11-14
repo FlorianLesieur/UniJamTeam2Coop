@@ -3,21 +3,12 @@
 [ext_resource type="Script" uid="uid://djpf74e6r58bs" path="res://Scripts/game.gd" id="1_4ndsd"]
 [ext_resource type="PackedScene" uid="uid://d3w2uuf2v2wod" path="res://Scenes/Physique/Room/Room.tscn" id="2_xbb3c"]
 [ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/Physique/player.tscn" id="3_53bud"]
-[ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="3_cao1l"]
-[ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="4_p88y0"]
 
 [node name="Game" type="Node2D" unique_id=2019292241 node_paths=PackedStringArray("rooms")]
 script = ExtResource("1_4ndsd")
 rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5")]
 
 [node name="Room1" parent="." unique_id=1018444833 instance=ExtResource("2_xbb3c")]
-
-[node name="buttonDoor" parent="Room1" unique_id=1878903987 instance=ExtResource("3_cao1l")]
-position = Vector2(989, 373)
-
-[node name="door" parent="Room1" unique_id=1646548 instance=ExtResource("4_p88y0")]
-position = Vector2(990.0001, 376)
-scale = Vector2(7, 7)
 
 [node name="Room2" parent="." unique_id=1599140846 instance=ExtResource("2_xbb3c")]
 position = Vector2(2000, 0)
@@ -40,7 +31,6 @@ scale = Vector2(0.5, 0.5)
 
 [connection signal="retour" from="Room1" to="." method="_on_room_retour"]
 [connection signal="sorti" from="Room1" to="." method="_on_room_sorti"]
-[connection signal="pressed" from="Room1/buttonDoor" to="Room1" method="OpenDoor"]
 [connection signal="retour" from="Room2" to="." method="_on_room_retour"]
 [connection signal="sorti" from="Room2" to="." method="_on_room_sorti"]
 [connection signal="retour" from="Room3" to="." method="_on_room_retour"]
