@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://da2oknrwtqijd"
+=======
+uid="uid://cmitc4nd1e1lt"
+>>>>>>> 3faf9e3 (chore: button code for physic room 2)
 path="res://.godot/imported/Map_4.png-1fdec803f3c257dc774796dbf5236f29.ctex"
 metadata={
 "vram_texture": false
