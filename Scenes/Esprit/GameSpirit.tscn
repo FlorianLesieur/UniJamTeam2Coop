@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://blqekonu3cqvx"]
+
+[ext_resource type="Script" uid="uid://3cs83e4iui5w" path="res://Scripts/GameSpirit.gd" id="1_3utc4"]
+[ext_resource type="PackedScene" uid="uid://c4vpmm2hwe3j2" path="res://Scenes/Esprit/RoomSpirit.tscn" id="2_3ahv2"]
+[ext_resource type="PackedScene" uid="uid://cbp4wp85axxqs" path="res://Scenes/Esprit/piece.tscn" id="3_ppguh"]
+[ext_resource type="Texture2D" uid="uid://hjltqpd7olgc" path="res://Assets/icon.svg" id="4_tldpl"]
+
+[node name="GameSpirit" type="Control" unique_id=1736079434 node_paths=PackedStringArray("rooms")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3utc4")
+rooms = [NodePath("RoomSpirit"), NodePath("RoomSpirit2"), NodePath("RoomSpirit3")]
+
+[node name="RoomSpirit" parent="." unique_id=522636664 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+visible = false
+layout_mode = 1
+pieces = [NodePath("Piece4")]
+
+[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit" unique_id=90563721]
+position = Vector2(511, 264)
+texture = ExtResource("4_tldpl")
+
+[node name="Piece4" parent="RoomSpirit" unique_id=1248601502 instance=ExtResource("3_ppguh")]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 149.0
+offset_right = 273.0
+offset_bottom = 285.0
+
+[node name="RoomSpirit2" parent="." unique_id=804344434 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+layout_mode = 1
+pieces = [NodePath("Piece4")]
+keys = Array[Vector2]([Vector2(300, 250)])
+
+[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit2" unique_id=724058428]
+position = Vector2(300, 250)
+texture = ExtResource("4_tldpl")
+
+[node name="Piece4" parent="RoomSpirit2" unique_id=63451767 instance=ExtResource("3_ppguh")]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 149.0
+offset_right = 273.0
+offset_bottom = 285.0
+
+[node name="RoomSpirit3" parent="." unique_id=1809866431 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+layout_mode = 1
+pieces = [NodePath("Piece4")]
+keys = Array[Vector2]([Vector2(400, 250)])
+
+[node name="Sprite2D4" type="Sprite2D" parent="RoomSpirit3" unique_id=1179183449]
+position = Vector2(400, 250)
+texture = ExtResource("4_tldpl")
+
+[node name="Piece4" parent="RoomSpirit3" unique_id=565202746 instance=ExtResource("3_ppguh")]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 149.0
+offset_right = 273.0
+offset_bottom = 285.0
+
+[connection signal="next" from="RoomSpirit" to="." method="_on_room_spirit_next"]
+[connection signal="prev" from="RoomSpirit" to="." method="_on_room_spirit_prev"]
+[connection signal="next" from="RoomSpirit2" to="." method="_on_room_spirit_2_next"]
+[connection signal="prev" from="RoomSpirit2" to="." method="_on_room_spirit_2_prev"]
+[connection signal="next" from="RoomSpirit3" to="." method="_on_room_spirit_3_next"]
+[connection signal="prev" from="RoomSpirit3" to="." method="_on_room_spirit_3_prev"]

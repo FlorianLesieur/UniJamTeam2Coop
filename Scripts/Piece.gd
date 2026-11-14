@@ -33,10 +33,7 @@ func _process(delta: float) -> void:
 		position = lerp(position, position_visee, delta * speed)
 		#position.x=move_toward(position.x,position.x-pos_x_pressed+position_souris.x,delta*speed)
 		#position.y=move_toward(position.y,position.y-pos_y_pressed+position_souris.y,delta*speed)
-	var pos_center=position
-	pos_center.x+=size.x/2
-	pos_center.y+=size.y/2
-	print(pos_center)
+
 
 func _on_button_down() -> void:
 	moving = true
