@@ -13,6 +13,8 @@ var opened = false
 
 @onready var door = $HiddenWall
 
+@export var defaultLit = false
+
 func GetButton(id : int) -> void:
 	if id == answer_door[index] && (current_list == 0 || current_list == 1):
 		current_list = 1
