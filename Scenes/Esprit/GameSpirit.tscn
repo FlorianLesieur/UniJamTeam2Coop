@@ -10,7 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://ce5xacky5r3rb" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top.png" id="9_8ol5l"]
 [ext_resource type="Texture2D" uid="uid://dt3xd2vtp550n" path="res://Assets/Esprit/Pillars/T_Pillar_Top.png" id="9_w5e7p"]
 [ext_resource type="Texture2D" uid="uid://b4skgf5lmasfl" path="res://Assets/Esprit/Maps/Map_3.png" id="10_8ol5l"]
-[ext_resource type="Texture2D" uid="uid://da2oknrwtqijd" path="res://Assets/Esprit/Maps/Map_4.png" id="11_w5e7p"]
+[ext_resource type="Texture2D" uid="uid://cmitc4nd1e1lt" path="res://Assets/Esprit/Maps/Map_4.png" id="11_w5e7p"]
+[ext_resource type="PackedScene" uid="uid://21myfky7ifbo" path="res://Scenes/Esprit/Room5.tscn" id="12_km8cv"]
+[ext_resource type="Script" uid="uid://bk7qvwldl5a7v" path="res://Scripts/Esprit/Room5.gd" id="13_fgjyx"]
+[ext_resource type="Texture2D" uid="uid://brqonfviibufl" path="res://Assets/Esprit/Maps/map_5.png" id="14_043if"]
+[ext_resource type="Texture2D" uid="uid://bvn8uw3foa00m" path="res://Assets/Esprit/Pillars/Semi_Circle_Pillar.png" id="15_abhwm"]
+[ext_resource type="Texture2D" uid="uid://bpc1eg4n688h4" path="res://Assets/Esprit/Pillars/Rhombus_Pillar.png" id="16_8wgek"]
+[ext_resource type="Texture2D" uid="uid://b6yqi1fprkf7w" path="res://Assets/Esprit/Pillars/Triangle_Pillar.png" id="17_8wlue"]
+[ext_resource type="Texture2D" uid="uid://drrnyq2arfrxv" path="res://Assets/Esprit/Pillars/Square_Pillar.png" id="18_38xxe"]
 
 [sub_resource type="Gradient" id="Gradient_c0dwe"]
 offsets = PackedFloat32Array(0.006024096, 0.43975905, 0.48795182, 1)
@@ -26,7 +33,7 @@ gradient = SubResource("Gradient_w5e7p")
 fill_from = Vector2(1, 1)
 fill_to = Vector2(1, 1)
 
-[node name="GameSpirit" type="Control" unique_id=1736079434 node_paths=PackedStringArray("rooms")]
+[node name="GameSpirit" type="Control" unique_id=1736079434 node_paths=PackedStringArray("rooms", "room5")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,8 +42,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3utc4")
 rooms = [NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4")]
+room5 = NodePath("Room5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940475652]
+visible = false
 position = Vector2(488, 269)
 scale = Vector2(6826.9907, 1018.93976)
 texture = SubResource("GradientTexture1D_jyycw")
@@ -161,6 +170,7 @@ script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
 [node name="Room4" parent="." unique_id=1936581324 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
+visible = false
 layout_mode = 1
 pieces = [NodePath("EasterEgg")]
 keys = Array[Vector2]([Vector2(511, 273)])
@@ -180,3 +190,81 @@ icon = SubResource("GradientTexture2D_riqys")
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="Room5" parent="." unique_id=1121321171 node_paths=PackedStringArray("pieces") instance=ExtResource("12_km8cv")]
+layout_mode = 1
+script = ExtResource("13_fgjyx")
+pieces = [NodePath("Semi_Circle"), NodePath("Rhombus"), NodePath("Square"), NodePath("Triangle")]
+keys = Array[Vector2]([Vector2(700, 209), Vector2(342, 200), Vector2(709, 386), Vector2(414, 455)])
+
+[node name="Map5" type="Sprite2D" parent="Room5" unique_id=396958075]
+position = Vector2(574, 297)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("14_043if")
+
+[node name="Semi_Circle" type="Button" parent="Room5" unique_id=2118729033]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 239.0
+offset_right = 523.0
+offset_bottom = 309.0
+flat = true
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="TextureRect" type="TextureRect" parent="Room5/Semi_Circle" unique_id=939953329]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("15_abhwm")
+
+[node name="Rhombus" type="Button" parent="Room5" unique_id=1581599219]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 293.0
+offset_right = 373.0
+offset_bottom = 363.0
+flat = true
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="TextureRect" type="TextureRect" parent="Room5/Rhombus" unique_id=1347513917]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("16_8wgek")
+
+[node name="Triangle" type="Button" parent="Room5" unique_id=716879087]
+layout_mode = 0
+offset_left = 610.0
+offset_top = 467.0
+offset_right = 680.0
+offset_bottom = 537.0
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="TextureRect" type="TextureRect" parent="Room5/Triangle" unique_id=232929214]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("17_8wlue")
+
+[node name="Square" type="Button" parent="Room5" unique_id=1429782155]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 422.0
+offset_right = 449.0
+offset_bottom = 492.0
+flat = true
+script = ExtResource("5_3ahv2")
+metadata/_custom_type_script = "uid://dq8d15t07mjj"
+
+[node name="TextureRect" type="TextureRect" parent="Room5/Square" unique_id=87058244]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("18_38xxe")
