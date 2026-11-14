@@ -1,11 +1,10 @@
 extends Node
 
+class_name CharButton
+
 # When you receive AddCharacter, add the character in the var
 
 @export var character = "a"
-# @export var character = "b"
-# @export var character = "c"
-# @export var character = "d"
 
 signal AddCharacter
 
