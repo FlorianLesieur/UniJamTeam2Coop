@@ -26,11 +26,10 @@ offset_bottom = 56.0
 
 [node name="Button" type="Button" parent="." unique_id=1531267939]
 layout_mode = 0
-offset_left = 286.0
-offset_top = 57.0
-offset_right = 422.0
-offset_bottom = 193.0
-scale = Vector2(0.6829705, 0.68757266)
+offset_left = 1140.0
+offset_top = 591.0
+offset_right = 1276.0
+offset_bottom = 727.0
 icon = SubResource("CompressedTexture2D_l1lbf")
 script = ExtResource("1_yug5r")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
