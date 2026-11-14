@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://drrnyq2arfrxv" path="res://Assets/Esprit/Pillars/Square_Pillar.png" id="18_38xxe"]
 [ext_resource type="Texture2D" uid="uid://m6vouc5imojr" path="res://Assets/Esprit/Pillars/Square_Pillar_with_info_revealed.png" id="22_twiwv"]
 [ext_resource type="Texture2D" uid="uid://b64we45vuc2h0" path="res://Assets/Esprit/Maps/Map_6.png" id="23_k3e2r"]
+[ext_resource type="Texture2D" uid="uid://dndop8yvwukmw" path="res://Assets/Esprit/Ecran_fin.png" id="24_upt55"]
 
 [sub_resource type="Gradient" id="Gradient_c0dwe"]
 offsets = PackedFloat32Array(0.006024096, 0.43975905, 0.48795182, 1)
@@ -307,8 +308,19 @@ scale = Vector2(0.09, 0.09)
 texture = ExtResource("22_twiwv")
 
 [node name="Room6" parent="." unique_id=267208149 instance=ExtResource("2_3ahv2")]
+visible = false
 layout_mode = 1
 
 [node name="Map6" type="Sprite2D" parent="Room6" unique_id=201310566]
 position = Vector2(604, 266)
 texture = ExtResource("23_k3e2r")
+
+[node name="EndRoom" type="Control" parent="." unique_id=1965107105]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EcranFin" type="Sprite2D" parent="." unique_id=1083285722]
+position = Vector2(556, 224)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("24_upt55")
