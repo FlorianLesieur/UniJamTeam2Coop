@@ -5,4 +5,6 @@ var locked = true
 @onready var door : Door = $Door
 
 func GetButton(id : int) -> void:
-	door.queue_free()
+	if locked:
+		door.queue_free()
+		locked = false
