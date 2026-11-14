@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dw8m0xgaw6d8a"]
+
+[ext_resource type="Texture2D" uid="uid://x3o05uuhd83m" path="res://Assets/Physique/Room/RoomB.png" id="1_3wdmx"]
+[ext_resource type="Script" uid="uid://b7vkl2e5bfqpq" path="res://Scripts/openDoor.gd" id="1_7cnb6"]
+[ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/door.gd" id="3_2tutk"]
+[ext_resource type="Texture2D" uid="uid://ce272n7t3w65d" path="res://Assets/Physique/Porte.png" id="4_w3e7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa0vk"]
+size = Vector2(74, 70)
+
+[node name="Room2Phys" type="Node2D" unique_id=1419052791]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1157344240]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1927648344]
+script = ExtResource("1_7cnb6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=753027201]
+position = Vector2(-0.4999714, 8.583069e-06)
+scale = Vector2(8.006945, 5.785714)
+texture = ExtResource("1_3wdmx")
+
+[node name="door" type="Node" parent="Node2D" unique_id=873450517]
+script = ExtResource("3_2tutk")
+metadata/_custom_type_script = "uid://bx6igbkca51n7"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/door" unique_id=1513358740]
+position = Vector2(476, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/door/StaticBody2D" unique_id=147881420]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_aa0vk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/door/StaticBody2D" unique_id=1558894224]
+position = Vector2(-4.0000277, -0.4999995)
+scale = Vector2(7.9999967, 5.8125)
+texture = ExtResource("4_w3e7n")
+
+[connection signal="OpenDoor" from="Node2D/door" to="Node2D" method="_on_door_open_door"]
