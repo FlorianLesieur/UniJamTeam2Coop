@@ -19,3 +19,9 @@ func getExit() -> Vector2 :
 
 func getMiddle() -> Vector2 :
 	return room.middle.position + position
+
+func allumer() -> void :
+	room.allumer()
+
+func eteindre() -> void :
+	room.eteindre()

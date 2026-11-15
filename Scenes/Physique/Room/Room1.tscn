@@ -19,6 +19,7 @@ tile_map_data = PackedByteArray("AAACAAEAAAAAAAAAAAADAAEAAAABAAAAAAACAAIAAAABAAA
 
 [node name="Room" parent="." unique_id=1018444833 instance=ExtResource("2_ac2h6")]
 script = ExtResource("1_rqtq1")
+allume = null
 
 [node name="buttonDoor" parent="Room" unique_id=1878903987 instance=ExtResource("5_rqtq1")]
 position = Vector2(989, 373)
@@ -35,7 +36,6 @@ color = Color(0.11119685, 0.11119684, 0.11119684, 1)
 
 [node name="Torche" parent="Torches" unique_id=1524118317 instance=ExtResource("8_iclru")]
 position = Vector2(163, 138)
-side = "ouest"
 
 [node name="Torche2" parent="Torches" unique_id=1997836557 instance=ExtResource("8_iclru")]
 position = Vector2(609, 60)
