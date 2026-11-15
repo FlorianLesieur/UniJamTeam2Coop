@@ -331,7 +331,7 @@ texture = ExtResource("22_twiwv")
 [node name="Room6" parent="." unique_id=267208149 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 layout_mode = 1
 pieces = [NodePath("Rune_H"), NodePath("Rune_K"), NodePath("Rune_E"), NodePath("Rune_C"), NodePath("Rune_B"), NodePath("Rune_A"), NodePath("Rune_I"), NodePath("Rune_F"), NodePath("Rune_L"), NodePath("Rune_D"), NodePath("Rune_G"), NodePath("Rune_J")]
-keys = Array[Vector2]([Vector2(287, 437), Vector2(280, 352), Vector2(280, 264), Vector2(332, 183), Vector2(398, 180), Vector2(458, 169), Vector2(521, 172), Vector2(582, 167), Vector2(639, 168), Vector2(644, 244), Vector2(669, 345), Vector2(681, 441)])
+keys = Array[Vector2]([Vector2(287, 437), Vector2(280, 352), Vector2(280, 264), Vector2(332, 183), Vector2(398, 180), Vector2(458, 169), Vector2(521, 172), Vector2(582, 167), Vector2(639, 168), Vector2(653, 244), Vector2(669, 345), Vector2(681, 441)])
 
 [node name="Map6" type="Sprite2D" parent="Room6" unique_id=201310566]
 position = Vector2(766, 86.99998)
@@ -359,10 +359,10 @@ texture = ExtResource("23_upt55")
 [node name="Rune_K" type="Button" parent="Room6" unique_id=686818799]
 z_index = 2
 layout_mode = 0
-offset_left = 417.0
-offset_top = 514.0
-offset_right = 477.0
-offset_bottom = 574.0
+offset_left = 312.0
+offset_top = 518.0
+offset_right = 372.0
+offset_bottom = 578.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
@@ -377,28 +377,28 @@ texture = ExtResource("24_ajqfe")
 [node name="Rune_E" type="Button" parent="Room6" unique_id=164792191]
 z_index = 2
 layout_mode = 0
-offset_right = 60.0
-offset_bottom = 60.0
+offset_left = 413.0
+offset_top = 514.0
+offset_right = 473.0
+offset_bottom = 574.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
 
 [node name="TextureRect" type="TextureRect" parent="Room6/Rune_E" unique_id=261584919]
 layout_mode = 0
-offset_left = 508.0
-offset_top = 511.0
-offset_right = 1275.0
-offset_bottom = 1287.0
+offset_right = 767.0
+offset_bottom = 776.0
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("26_y0muh")
 
 [node name="Rune_C" type="Button" parent="Room6" unique_id=191836526]
 z_index = 2
 layout_mode = 0
-offset_left = 308.0
-offset_top = 509.0
-offset_right = 368.0
-offset_bottom = 569.0
+offset_left = 496.0
+offset_top = 521.0
+offset_right = 556.0
+offset_bottom = 581.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
@@ -503,10 +503,10 @@ texture = ExtResource("32_mhqu7")
 [node name="Rune_D" type="Button" parent="Room6" unique_id=1970942558]
 z_index = 2
 layout_mode = 0
-offset_left = 862.0
-offset_top = 252.0
-offset_right = 922.0
-offset_bottom = 312.0
+offset_left = 864.0
+offset_top = 331.0
+offset_right = 924.0
+offset_bottom = 391.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"
@@ -521,10 +521,10 @@ texture = ExtResource("33_14brf")
 [node name="Rune_G" type="Button" parent="Room6" unique_id=1025287944]
 z_index = 2
 layout_mode = 0
-offset_left = 861.0
-offset_top = 339.0
-offset_right = 921.0
-offset_bottom = 399.0
+offset_left = 856.0
+offset_top = 242.0
+offset_right = 916.0
+offset_bottom = 302.0
 flat = true
 script = ExtResource("5_3ahv2")
 metadata/_custom_type_script = "uid://dq8d15t07mjj"

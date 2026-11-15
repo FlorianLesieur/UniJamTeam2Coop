@@ -10,7 +10,7 @@ signal next()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in range(len(keys)):
+	for i in range(len(pieces)):
 		pieces[i].pos_key=keys[i]
 		placed.append(false)
 		
@@ -18,7 +18,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	for i in range(len(keys)):
+	for i in range(len(pieces)):
 		if pieces[i].is_placed():
 			placed[i]=true
 		else:
@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 func all_placed() -> bool:
 	var res=true
 	for i in range(len(placed)):
+		if (placed[i]):
+			print("pièce ",i," placée")
 		res=res&&placed[i]
 	return res
 
