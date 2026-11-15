@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://i76a5i82rd2h" path="res://Assets/Esprit/Maps/Map_2.png" id="6_tldpl"]
 [ext_resource type="Texture2D" uid="uid://d1dd4cmxnbjne" path="res://Assets/Esprit/Pillars/X_Pillar_Top.png" id="8_fhdtl"]
 [ext_resource type="Texture2D" uid="uid://ce5xacky5r3rb" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top.png" id="9_8ol5l"]
-[ext_resource type="Texture2D" uid="uid://dt3xd2vtp550n" path="res://Assets/Esprit/Pillars/T_Pillar_Top.png" id="9_w5e7p"]
 [ext_resource type="Texture2D" uid="uid://b4skgf5lmasfl" path="res://Assets/Esprit/Maps/Map_3.png" id="10_8ol5l"]
 [ext_resource type="Texture2D" uid="uid://da2oknrwtqijd" path="res://Assets/Esprit/Maps/Map_4.png" id="11_w5e7p"]
 
@@ -138,7 +137,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.13, 0.13)
-texture = ExtResource("9_w5e7p")
 
 [node name="Room3" parent="." unique_id=1809866431 node_paths=PackedStringArray("pieces") instance=ExtResource("2_3ahv2")]
 visible = false
