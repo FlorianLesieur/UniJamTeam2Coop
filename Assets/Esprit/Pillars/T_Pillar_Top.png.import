@@ -3,11 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwu30jci2kq7l"
-valid=false
+path="res://.godot/imported/T_Pillar_Top.png-0e2589d264faa4751017a677948c7fee.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Assets/Esprit/Pillars/T_Pillar_Top.png"
+dest_files=["res://.godot/imported/T_Pillar_Top.png-0e2589d264faa4751017a677948c7fee.ctex"]
 
 [params]
 
