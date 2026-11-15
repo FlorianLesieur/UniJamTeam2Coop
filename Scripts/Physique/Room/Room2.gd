@@ -2,11 +2,12 @@ extends Room
 
 var locked = true
 
-@onready var door : Door = $Door
+@onready var door : Door = $door
 
 @export var defaultLit = true
 
-func GetButton(id : int) -> void:
+func GetButton(_id : int) -> void:
 	if locked:
-		door.queue_free()
+		door.play_sound()
+		door.visible = false
 		locked = false

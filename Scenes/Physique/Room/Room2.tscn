@@ -27,7 +27,7 @@ script = ExtResource("7_x1sat")
 
 [node name="Timer" type="Timer" parent="Node2D/PhysiqueButton" unique_id=2043119959]
 
-[node name="Door" parent="Node2D" unique_id=1118860039 instance=ExtResource("6_x1sat")]
+[node name="door" parent="Node2D" unique_id=1118860039 instance=ExtResource("6_x1sat")]
 position = Vector2(416.00006, -1.9999998)
 scale = Vector2(7, 7)
 
