@@ -8,6 +8,5 @@ var locked = true
 
 func GetButton(_id : int) -> void:
 	if locked:
-		door.play_sound()
-		door.visible = false
+		door.play_sound_and_delete()
 		locked = false

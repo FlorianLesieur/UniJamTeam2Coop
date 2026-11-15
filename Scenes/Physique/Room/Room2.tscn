@@ -32,6 +32,7 @@ position = Vector2(416.00006, -1.9999998)
 scale = Vector2(7, 7)
 
 [node name="Player" parent="Node2D" unique_id=663629846 instance=ExtResource("8_s1xa5")]
+scale = Vector2(0.25, 0.25)
 
 [connection signal="pressed" from="Node2D/PhysiqueButton" to="Node2D" method="GetButton"]
 [connection signal="timeout" from="Node2D/PhysiqueButton/Timer" to="Node2D/PhysiqueButton" method="_on_timeout"]
