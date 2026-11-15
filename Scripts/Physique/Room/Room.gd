@@ -7,7 +7,7 @@ class_name Room
 signal retour
 signal sorti
 
-@export var isOnDefaultLit = true
+
 
 func _on_entree_body_entered(body: Node2D) -> void:
 	print("entrer")
