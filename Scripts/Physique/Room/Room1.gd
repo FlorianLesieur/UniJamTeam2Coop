@@ -6,7 +6,11 @@ extends Room
 @onready var buttonDoor : PhysiqueButton = $buttonDoor
 
 
-@warning_ignore("unused_parameter")
-func OpenDoor(id : int) -> void:
-	door.queue_free()
-	buttonDoor.queue_free()
+var opened = false
+
+func OpenDoor(_id : int) -> void:
+	if not opened:
+		door.play_sound()
+		door.visible = false
+		buttonDoor.queue_free()
+		opened = true
