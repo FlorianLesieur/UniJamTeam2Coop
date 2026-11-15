@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://d3w2uuf2v2wod" path="res://Scenes/Physique/Room/Room.tscn" id="6_s1xa5"]
 [ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="6_x1sat"]
 [ext_resource type="Script" uid="uid://bem444tuqmrpl" path="res://Scripts/Physique/PhysiqueButtonRoom2.gd" id="7_x1sat"]
-[ext_resource type="PackedScene" uid="uid://qxxew0mca61x" path="res://Scenes/Physique/Torche.tscn" id="8_s1xa5"]
 
 [node name="Room2" type="Node2D" unique_id=1518577394]
 script = ExtResource("1_1q34m")
