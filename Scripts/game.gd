@@ -22,6 +22,7 @@ func room_retour() -> void:
 	
 	emplacement -= 1
 	print(emplacement)
+	rooms[emplacement-1].eteindre()
 	player.position = rooms[emplacement-1].getExit()
 	camera.position = rooms[emplacement-1].getMiddle()
 
@@ -32,5 +33,6 @@ func room_sorti() -> void:
 	
 	emplacement += 1
 	print(emplacement)
+	rooms[emplacement-1].allumer()
 	player.position = rooms[emplacement-1].getEntry()
 	camera.position = rooms[emplacement-1].getMiddle()
