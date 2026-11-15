@@ -25,6 +25,3 @@ func allumer() -> void :
 
 func eteindre() -> void :
 	room.eteindre()
-
-func playerBehing(body: Node2D) -> void:
-	pass # Replace with function body.
