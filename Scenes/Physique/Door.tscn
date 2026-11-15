@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bx6igbkca51n7" path="res://Scripts/Physique/Door.gd" id="1_xprm8"]
 [ext_resource type="Texture2D" uid="uid://ce272n7t3w65d" path="res://Assets/Physique/Porte.png" id="2_ws2q1"]
-[ext_resource type="AudioStream" uid="uid://p1875ywnwl1x" path="res://Assets/Son/doorOpens.wav" id="3_ws2q1"]
+[ext_resource type="AudioStream" uid="uid://dmf3p3hxqtlhi" path="res://Assets/Son/unlock.wav" id="3_ws2q1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csd5h"]
 size = Vector2(9, 13.125)
