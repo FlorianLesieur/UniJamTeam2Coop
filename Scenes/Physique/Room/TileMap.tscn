@@ -44,4 +44,5 @@ tile_size = Vector2i(16, 12)
 sources/0 = SubResource("TileSetAtlasSource_leowy")
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1083123632]
+scale = Vector2(8, 8)
 tile_set = SubResource("TileSet_g4v7s")
