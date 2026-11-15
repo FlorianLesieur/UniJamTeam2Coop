@@ -2,7 +2,7 @@ extends Room
 
 var locked = true
 
-@onready var door : Door = $door
+@onready var door : Door = $Door
 
 @export var defaultLit = true
 
