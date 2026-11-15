@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://d3w2uuf2v2wod" path="res://Scenes/Physique/Room/Room.tscn" id="6_s1xa5"]
 [ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="6_x1sat"]
 [ext_resource type="Script" uid="uid://bem444tuqmrpl" path="res://Scripts/Physique/PhysiqueButtonRoom2.gd" id="7_x1sat"]
-[ext_resource type="PackedScene" uid="uid://dyseuftnyspkx" path="res://Scenes/Physique/player.tscn" id="8_s1xa5"]
 
 [node name="Room2" type="Node2D" unique_id=1518577394]
 script = ExtResource("1_1q34m")
@@ -28,10 +27,6 @@ script = ExtResource("7_x1sat")
 
 [node name="Timer" type="Timer" parent="Room/PhysiqueButton" unique_id=2043119959]
 one_shot = true
-
-[node name="Player" parent="Room" unique_id=663629846 instance=ExtResource("8_s1xa5")]
-position = Vector2(616, 212)
-scale = Vector2(0.25, 0.25)
 
 [node name="Door" parent="Room" unique_id=1118860039 instance=ExtResource("6_x1sat")]
 position = Vector2(996.99994, 379.99997)
