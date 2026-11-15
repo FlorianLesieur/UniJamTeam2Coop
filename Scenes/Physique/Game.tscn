@@ -21,7 +21,9 @@ position = Vector2(2700, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1326329655]
 position = Vector2(583, 384)
+zoom = Vector2(1.01, 0.98)
 
 [node name="Player" parent="." unique_id=663629846 instance=ExtResource("3_53bud")]
+z_index = 6
 position = Vector2(362, 297)
 scale = Vector2(0.25, 0.25)
