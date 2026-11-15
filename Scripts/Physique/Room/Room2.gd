@@ -6,7 +6,8 @@ var locked = true
 
 @export var defaultLit = true
 
-func GetButton(_id : int) -> void:
+@warning_ignore("unused_parameter")
+func GetButton(id : int) -> void:
 	if locked:
 		door.play_sound_and_delete()
 		locked = false

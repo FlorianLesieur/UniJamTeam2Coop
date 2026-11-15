@@ -16,7 +16,5 @@ func press() :
 func _on_timeout():
 	if times_pressed == 4:
 		pressed.emit(0)
-		print("Button pressed exactly 4 times")
 	else:
 		times_pressed = 0
-		print("Button pressed an inexact amount of times")
