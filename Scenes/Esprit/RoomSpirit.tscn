@@ -16,7 +16,7 @@ keys = Array[Vector2]([Vector2(511, 264)])
 metadata/_custom_type_script = "uid://c7mx22u13m6qu"
 
 [node name="Button3" type="Button" parent="." unique_id=1752231662]
-z_index = 2
+z_index = 1
 layout_mode = 0
 offset_left = 10.0
 offset_top = 229.0
@@ -32,7 +32,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_d13pa")
 
 [node name="Button" type="Button" parent="." unique_id=371366058]
-z_index = 2
+z_index = 1
 layout_mode = 0
 offset_left = 1011.0
 offset_top = 236.0
