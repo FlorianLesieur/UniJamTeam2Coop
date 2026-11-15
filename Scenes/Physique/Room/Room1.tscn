@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="3_catfe"]
 [ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="5_rqtq1"]
 [ext_resource type="Script" uid="uid://muly5r3qj768" path="res://Scenes/Physique/buttonDoor.gd" id="6_lwdc6"]
+[ext_resource type="PackedScene" uid="uid://qxxew0mca61x" path="res://Scenes/Physique/Torche.tscn" id="8_iclru"]
 
 [node name="Room1" type="Node2D" unique_id=784714343]
 script = ExtResource("1_iclru")
@@ -27,5 +28,26 @@ script = ExtResource("6_lwdc6")
 [node name="door" parent="Room" unique_id=1118860039 instance=ExtResource("3_catfe")]
 position = Vector2(990.0001, 376)
 scale = Vector2(7, 7)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=609711215]
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[node name="Torches" type="Node2D" parent="." unique_id=700280994]
+
+[node name="Torche" parent="Torches" unique_id=1524118317 instance=ExtResource("8_iclru")]
+position = Vector2(163, 138)
+side = "ouest"
+
+[node name="Torche2" parent="Torches" unique_id=1997836557 instance=ExtResource("8_iclru")]
+position = Vector2(609, 60)
+side = "nord"
+
+[node name="Torche3" parent="Torches" unique_id=1144787217 instance=ExtResource("8_iclru")]
+position = Vector2(210, 634)
+side = "sud"
+
+[node name="Torche5" parent="Torches" unique_id=1466578849 instance=ExtResource("8_iclru")]
+position = Vector2(836, 626)
+side = "sud"
 
 [connection signal="pressed" from="Room/buttonDoor" to="Room" method="OpenDoor"]

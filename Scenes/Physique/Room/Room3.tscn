@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cu78rpeushco3"]
 
 [ext_resource type="Texture2D" uid="uid://iiydmjce1tcq" path="res://Assets/Physique/Room/RoomC.png" id="1_cv2v0"]
-[ext_resource type="Script" uid="uid://djnlg6b7w26uv" path="res://Scripts/Physique/Room/room_1.gd" id="1_mbsnw"]
+[ext_resource type="Script" uid="uid://bp4qnkxbqalns" path="res://Scripts/Physique/Room/SupportRoom.gd" id="1_mbsnw"]
 [ext_resource type="PackedScene" uid="uid://eq7c1uflbcm4" path="res://Scenes/Physique/PhysiqueButton.tscn" id="4_xr5d2"]
 [ext_resource type="PackedScene" uid="uid://cvtvvhlfx6hdh" path="res://Scenes/Physique/Door.tscn" id="5_c82h5"]
 [ext_resource type="PackedScene" uid="uid://bngjoynr7njsx" path="res://Scenes/Physique/Room/BigRoom.tscn" id="6_mbsnw"]
+[ext_resource type="Script" uid="uid://c6a5t6nt3segp" path="res://Scripts/button_2.gd" id="6_xr5d2"]
 [ext_resource type="PackedScene" uid="uid://qxxew0mca61x" path="res://Scenes/Physique/Torche.tscn" id="7_mbsnw"]
 [ext_resource type="Script" uid="uid://c1jkhu1ny8lco" path="res://Scripts/Physique/Room/Room3.gd" id="7_xr5d2"]
 
@@ -92,131 +93,132 @@ b = Vector2(855, 617)
 a = Vector2(858, 328)
 b = Vector2(963, 328)
 
-[node name="Room3" type="Node2D" unique_id=2070320622]
+[node name="Room3" type="Node2D" unique_id=1612407685]
 script = ExtResource("1_mbsnw")
-metadata/_custom_type_script = "uid://3ikvys6b1miu"
+metadata/_custom_type_script = "uid://bp4qnkxbqalns"
 
 [node name="RoomC" type="Sprite2D" parent="." unique_id=1043357016]
 position = Vector2(583.00006, 345)
 scale = Vector2(7, 7)
 texture = ExtResource("1_cv2v0")
 
-[node name="Room3" parent="." unique_id=897926840 instance=ExtResource("6_mbsnw")]
+[node name="Room" parent="." unique_id=897926840 instance=ExtResource("6_mbsnw")]
 script = ExtResource("7_xr5d2")
 
-[node name="buttonDoor" parent="Room3" unique_id=1475339792 instance=ExtResource("4_xr5d2")]
+[node name="buttonDoor" parent="Room" unique_id=1475339792 instance=ExtResource("4_xr5d2")]
 position = Vector2(989, 373)
+script = ExtResource("6_xr5d2")
 
-[node name="door" parent="Room3" unique_id=1543935943 instance=ExtResource("5_c82h5")]
+[node name="door" parent="Room" unique_id=1543935943 instance=ExtResource("5_c82h5")]
 position = Vector2(1002, 378)
 scale = Vector2(7, 7)
 
-[node name="laby" type="Node2D" parent="Room3" unique_id=860181001]
+[node name="laby" type="Node2D" parent="Room" unique_id=860181001]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Room3/laby" unique_id=106306658]
+[node name="StaticBody2D" type="StaticBody2D" parent="Room/laby" unique_id=106306658]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D" unique_id=999802492]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D" unique_id=999802492]
 position = Vector2(-1, -9)
 shape = SubResource("SegmentShape2D_g4v7s")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Room3/laby" unique_id=740389864]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Room/laby" unique_id=740389864]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D2" unique_id=1735564548]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D2" unique_id=1735564548]
 shape = SubResource("SegmentShape2D_yf5fn")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Room3/laby" unique_id=495471286]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Room/laby" unique_id=495471286]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D3" unique_id=2072636516]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D3" unique_id=2072636516]
 shape = SubResource("SegmentShape2D_53bud")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Room3/laby" unique_id=983704381]
+[node name="StaticBody2D4" type="StaticBody2D" parent="Room/laby" unique_id=983704381]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D4" unique_id=985643577]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D4" unique_id=985643577]
 shape = SubResource("SegmentShape2D_57qmd")
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="Room3/laby" unique_id=1475717673]
+[node name="StaticBody2D5" type="StaticBody2D" parent="Room/laby" unique_id=1475717673]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D5" unique_id=1991243489]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D5" unique_id=1991243489]
 shape = SubResource("SegmentShape2D_d0u6y")
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="Room3/laby" unique_id=1884795767]
+[node name="StaticBody2D6" type="StaticBody2D" parent="Room/laby" unique_id=1884795767]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D6" unique_id=806225529]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D6" unique_id=806225529]
 shape = SubResource("SegmentShape2D_3gngh")
 
-[node name="StaticBody2D7" type="StaticBody2D" parent="Room3/laby" unique_id=1580829124]
+[node name="StaticBody2D7" type="StaticBody2D" parent="Room/laby" unique_id=1580829124]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D7" unique_id=182863296]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D7" unique_id=182863296]
 shape = SubResource("SegmentShape2D_fcnqv")
 
-[node name="StaticBody2D8" type="StaticBody2D" parent="Room3/laby" unique_id=607338237]
+[node name="StaticBody2D8" type="StaticBody2D" parent="Room/laby" unique_id=607338237]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D8" unique_id=1485611718]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D8" unique_id=1485611718]
 shape = SubResource("SegmentShape2D_7numd")
 
-[node name="StaticBody2D9" type="StaticBody2D" parent="Room3/laby" unique_id=423692285]
+[node name="StaticBody2D9" type="StaticBody2D" parent="Room/laby" unique_id=423692285]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D9" unique_id=821349609]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D9" unique_id=821349609]
 shape = SubResource("SegmentShape2D_p1u0y")
 
-[node name="StaticBody2D10" type="StaticBody2D" parent="Room3/laby" unique_id=827094173]
+[node name="StaticBody2D10" type="StaticBody2D" parent="Room/laby" unique_id=827094173]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D10" unique_id=2115071083]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D10" unique_id=2115071083]
 shape = SubResource("SegmentShape2D_5s0fj")
 
-[node name="StaticBody2D11" type="StaticBody2D" parent="Room3/laby" unique_id=304783517]
+[node name="StaticBody2D11" type="StaticBody2D" parent="Room/laby" unique_id=304783517]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D11" unique_id=400003361]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D11" unique_id=400003361]
 shape = SubResource("SegmentShape2D_33x8s")
 
-[node name="StaticBody2D12" type="StaticBody2D" parent="Room3/laby" unique_id=1843625423]
+[node name="StaticBody2D12" type="StaticBody2D" parent="Room/laby" unique_id=1843625423]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D12" unique_id=1373015472]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D12" unique_id=1373015472]
 shape = SubResource("SegmentShape2D_2j2di")
 
-[node name="StaticBody2D13" type="StaticBody2D" parent="Room3/laby" unique_id=361051917]
+[node name="StaticBody2D13" type="StaticBody2D" parent="Room/laby" unique_id=361051917]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D13" unique_id=1889764295]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D13" unique_id=1889764295]
 shape = SubResource("SegmentShape2D_wgxnn")
 
-[node name="StaticBody2D14" type="StaticBody2D" parent="Room3/laby" unique_id=1786684112]
+[node name="StaticBody2D14" type="StaticBody2D" parent="Room/laby" unique_id=1786684112]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D14" unique_id=2014422520]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D14" unique_id=2014422520]
 shape = SubResource("SegmentShape2D_avnxn")
 
-[node name="StaticBody2D15" type="StaticBody2D" parent="Room3/laby" unique_id=642731478]
+[node name="StaticBody2D15" type="StaticBody2D" parent="Room/laby" unique_id=642731478]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D15" unique_id=1435622628]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D15" unique_id=1435622628]
 shape = SubResource("SegmentShape2D_qssos")
 
-[node name="StaticBody2D16" type="StaticBody2D" parent="Room3/laby" unique_id=180936043]
+[node name="StaticBody2D16" type="StaticBody2D" parent="Room/laby" unique_id=180936043]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D16" unique_id=1382983984]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D16" unique_id=1382983984]
 shape = SubResource("SegmentShape2D_11l65")
 
-[node name="StaticBody2D17" type="StaticBody2D" parent="Room3/laby" unique_id=666645406]
+[node name="StaticBody2D17" type="StaticBody2D" parent="Room/laby" unique_id=666645406]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D17" unique_id=1620210316]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D17" unique_id=1620210316]
 shape = SubResource("SegmentShape2D_4dgpn")
 
-[node name="StaticBody2D18" type="StaticBody2D" parent="Room3/laby" unique_id=906114091]
+[node name="StaticBody2D18" type="StaticBody2D" parent="Room/laby" unique_id=906114091]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D18" unique_id=1733018735]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D18" unique_id=1733018735]
 shape = SubResource("SegmentShape2D_mfxj0")
 
-[node name="StaticBody2D19" type="StaticBody2D" parent="Room3/laby" unique_id=1451288740]
+[node name="StaticBody2D19" type="StaticBody2D" parent="Room/laby" unique_id=1451288740]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D19" unique_id=931935791]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D19" unique_id=931935791]
 shape = SubResource("SegmentShape2D_aov4f")
 
-[node name="StaticBody2D20" type="StaticBody2D" parent="Room3/laby" unique_id=1560872536]
+[node name="StaticBody2D20" type="StaticBody2D" parent="Room/laby" unique_id=1560872536]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D20" unique_id=472329857]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D20" unique_id=472329857]
 shape = SubResource("SegmentShape2D_vfslc")
 
-[node name="StaticBody2D21" type="StaticBody2D" parent="Room3/laby" unique_id=685024091]
+[node name="StaticBody2D21" type="StaticBody2D" parent="Room/laby" unique_id=685024091]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/laby/StaticBody2D21" unique_id=793362991]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/laby/StaticBody2D21" unique_id=793362991]
 shape = SubResource("SegmentShape2D_1me0x")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1534803307]
@@ -230,14 +232,14 @@ side = "nord"
 
 [node name="Torche2" parent="Torches" unique_id=193416505 instance=ExtResource("7_mbsnw")]
 position = Vector2(700, 133)
-side = "ouest"
+side = "nord"
 
 [node name="Torche3" parent="Torches" unique_id=1844381025 instance=ExtResource("7_mbsnw")]
 position = Vector2(558, 323)
-side = "ouest"
+side = "nord"
 
 [node name="Torche5" parent="Torches" unique_id=1361558518 instance=ExtResource("7_mbsnw")]
 position = Vector2(865, 699)
-side = "est"
+side = "sud"
 
-[connection signal="pressed" from="Room3/buttonDoor" to="Room3" method="_open_door"]
+[connection signal="pressed" from="Room/buttonDoor" to="Room" method="_open_door"]
