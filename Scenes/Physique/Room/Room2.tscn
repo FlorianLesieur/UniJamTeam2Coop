@@ -32,5 +32,26 @@ one_shot = true
 position = Vector2(996.99994, 379.99997)
 scale = Vector2(7, 7)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=885350076]
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[node name="Torches" type="Node2D" parent="." unique_id=479785542]
+
+[node name="Torche" parent="Torches" unique_id=1441912709 instance=ExtResource("8_s1xa5")]
+position = Vector2(176, 492)
+side = "ouest"
+
+[node name="Torche2" parent="Torches" unique_id=1524118317 instance=ExtResource("8_s1xa5")]
+position = Vector2(776, 80)
+side = "nord"
+
+[node name="Torche3" parent="Torches" unique_id=1454523276 instance=ExtResource("8_s1xa5")]
+position = Vector2(248, 82)
+side = "nord"
+
+[node name="Torche5" parent="Torches" unique_id=1981771903 instance=ExtResource("8_s1xa5")]
+position = Vector2(874, 639)
+side = "sud"
+
 [connection signal="pressed" from="Room/PhysiqueButton" to="Room" method="GetButton"]
 [connection signal="timeout" from="Room/PhysiqueButton/Timer" to="Room/PhysiqueButton" method="_on_timeout"]

@@ -19,3 +19,9 @@ func _on_sortie_body_entered(body: Node2D) -> void:
 	print("sortie")
 	if body is Player:
 		sorti.emit()
+
+func allumer():
+	$"../Torches".show()
+
+func eteindre():
+	$"../Torches".hide()

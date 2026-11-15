@@ -1,4 +1,5 @@
 extends Node2D
+class_name Torche
 
 
 @onready var animation : AnimatedSprite2D = $AnimatedSprite2D
