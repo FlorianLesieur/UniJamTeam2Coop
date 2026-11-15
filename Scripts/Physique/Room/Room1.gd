@@ -1,14 +1,12 @@
 extends Room
 
-var countdown : Timer
+
 
 @onready var door : Door = $door
 @onready var buttonDoor : PhysiqueButton = $buttonDoor
-var pressed = 0
 
-func ButtonPressed() -> void:
-	pressed += 1
-	
-	
+
+@warning_ignore("unused_parameter")
+func OpenDoor(id : int) -> void:
 	door.queue_free()
 	buttonDoor.queue_free()

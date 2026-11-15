@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cn6kdxanxcdbt" path="res://Assets/Esprit/Pillars/X_Pillar_Top_with_info_revealed.png" id="8_8wgek"]
 [ext_resource type="Texture2D" uid="uid://d1dd4cmxnbjne" path="res://Assets/Esprit/Pillars/X_Pillar_Top.png" id="8_fhdtl"]
 [ext_resource type="Texture2D" uid="uid://ce5xacky5r3rb" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top.png" id="9_8ol5l"]
-[ext_resource type="Texture2D" uid="uid://dt3xd2vtp550n" path="res://Assets/Esprit/Pillars/T_Pillar_Top.png" id="9_w5e7p"]
 [ext_resource type="Texture2D" uid="uid://b4skgf5lmasfl" path="res://Assets/Esprit/Maps/Map_3.png" id="10_8ol5l"]
 [ext_resource type="Texture2D" uid="uid://cjx8ox10y1f75" path="res://Assets/Esprit/Pillars/Diamond_Pillar_Top_with_info_revealed.png" id="10_38xxe"]
 [ext_resource type="Texture2D" uid="uid://cmitc4nd1e1lt" path="res://Assets/Esprit/Maps/Map_4.png" id="11_w5e7p"]
@@ -168,7 +167,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.13, 0.13)
-texture = ExtResource("9_w5e7p")
 
 [node name="reveal" type="TextureRect" parent="Room2/T" unique_id=702290968]
 visible = false
