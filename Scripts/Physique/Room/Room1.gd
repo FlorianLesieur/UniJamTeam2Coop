@@ -7,8 +7,9 @@ extends Room
 
 var opened = false
 
-func OpenDoor() -> void:
+func OpenDoor(_id : int) -> void:
 	if not opened:
-		door.queue_free()
+		door.play_sound()
+		door.visible = false
 		buttonDoor.queue_free()
 		opened = true
