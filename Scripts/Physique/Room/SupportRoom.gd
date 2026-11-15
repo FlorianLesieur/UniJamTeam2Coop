@@ -19,3 +19,7 @@ func getExit() -> Vector2 :
 
 func getMiddle() -> Vector2 :
 	return room.middle.position + position
+
+
+func playerBehing(body: Node2D) -> void:
+	pass # Replace with function body.
