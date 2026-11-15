@@ -27,8 +27,6 @@ func _process(delta: float) -> void:
 func all_placed() -> bool:
 	var res=true
 	for i in range(len(placed)):
-		if (placed[i]):
-			print("pièce ",i," placée")
 		res=res&&placed[i]
 	return res
 

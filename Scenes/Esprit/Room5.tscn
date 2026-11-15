@@ -31,11 +31,10 @@ texture = ExtResource("2_38r1x")
 [node name="Button" type="Button" parent="." unique_id=990694448]
 z_index = 2
 layout_mode = 0
-offset_left = 491.00018
-offset_top = -2.9999847
-offset_right = 499.00018
-offset_bottom = 5.0000153
-scale = Vector2(15, 17.25)
+offset_left = 425.00003
+offset_right = 433.00003
+offset_bottom = 8.0
+scale = Vector2(33.443546, 12.749997)
 
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
